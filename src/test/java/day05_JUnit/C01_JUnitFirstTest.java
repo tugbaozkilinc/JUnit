@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C01_JUnitIlkTest {
+public class C01_JUnitFirstTest {
 
     @Test
     public void test01(){
