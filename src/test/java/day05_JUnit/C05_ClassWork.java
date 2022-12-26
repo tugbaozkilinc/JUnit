@@ -31,8 +31,7 @@ public class C05_ClassWork {
 
     @Test
     public void test01() throws InterruptedException {
-        // Verilen web sayfasına gidin.
-        // https://the-internet.herokuapp.com/checkboxes
+        // Verilen web sayfasına gidin. https://the-internet.herokuapp.com/checkboxes
         driver.get("https://the-internet.herokuapp.com/checkboxes");
 
         // Checkbox1 ve checkbox2 elementlerini locate edin.
@@ -44,9 +43,11 @@ public class C05_ClassWork {
         if(!checkbox1.isSelected()){
             checkbox1.click();
         }
+
         // Checkbox2 seçili değilse onay kutusunu tıklayın
         if(!checkbox2.isSelected()){
             checkbox2.click();
         }
     }
+
 }

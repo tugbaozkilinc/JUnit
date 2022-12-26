@@ -1,18 +1,8 @@
 package day05_JUnit;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.time.Duration;
 
 public class C04_BeforeClassAfterClass {
-
-    // @BeforeClass ve @AfterClass annotation lari sadece static method lar icin calisir.
-    // @BeforeClass ve @AfterClass kullanirsak olusturdugumuz @Test method larinin hepsini ayni anda calistirip en son @AfterClass i calistiririz.
-    // Ama sadece @Before ve @After kullanirsak her test icin @Before ve @After i kullanir.
-
 
     @BeforeClass
     public static void beforeClass() {
