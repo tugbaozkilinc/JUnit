@@ -40,7 +40,6 @@ public class Homework03 {
     // “Calculate Costs” butonuna basin sonra “purchase” butonuna basin
     // “Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin.
 
-
     @Test
     public void test01() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id='signin_button']")).click();
