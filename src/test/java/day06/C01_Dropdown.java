@@ -16,8 +16,6 @@ import java.util.List;
 
 public class C01_Dropdown {
 
-    // Note: dropdown select class iyla olusur ve dropdown in option tag leri vardir. Her bir option bir secenek. Eger test sinifinda birden fazla method olusturulmussa @Before kullanilir.
-
     static WebDriver driver;
 
     @Before
@@ -31,11 +29,11 @@ public class C01_Dropdown {
 
     @Test
     public void selectByIndexTest() {
-        // Given kullanici https://testcenter.techproeducation.com/index.php?page=dropdown sayfasindayken dogun yilini, ayini, ve gununu su sekilde secer: 2000, January, 10
+        // Given kullanici https://testcenter.techproeducation.com/index.php?page=dropdown sayfasindayken dogum yilini, ayini, ve gununu su sekilde secer: 2000, January, 10
         WebElement year = driver.findElement(By.xpath("//*[@id='year']")); // locate dropdown element
-        Select yearDropdown = new Select(year); // select objesi olustur, sectigin class a dikkat et.
+        Select yearDropdown = new Select(year); // select objesi olustur
         // Select object i kullanarak 3 farkli sekilde secim yapabilirim;
-        yearDropdown.selectByIndex(22); // secenek sirasi ve 0 dan baslar.
+        yearDropdown.selectByIndex(22); // secenek sirasi ve 1 den baslar.
         WebElement month = driver.findElement(By.xpath("//*[@id='month']"));
         Select monthDropdown = new Select(month);
         monthDropdown.selectByValue("0"); // value="0" January seceneginin value degerini yaziyoruz.
@@ -65,13 +63,6 @@ public class C01_Dropdown {
         Assert.assertEquals("Select a State", defaultText);
     }
 
-    @Test
-    public void selectFromDropdown() {
-        DropdownReusable.selectFromDropdown(driver.findElement(By.xpath("//select[@id='year']")), "2005");
-        DropdownReusable.selectFromDropdown(driver.findElement(By.xpath("//*[@id='month']")), "January");
-        DropdownReusable.selectFromDropdown(driver.findElement(By.id("day")), "12");
-    }
-
     @After
     public void tearDown() {
         driver.close();
@@ -84,8 +75,8 @@ public class C01_Dropdown {
     // -Select object'i olustururum
     // -Select object'i ile istedigim secenegi secerim
     // NOT: Select object'i olusturma nedenim, dropdownlarin Select class'i ile olusturulmasi
-    // 3. Tum dropdown seceneklerini nasil print ederiz
-    // -tum dropdown elementlerini getOptions() methodu ile listeye koyariz sonra secenekleri loop ile yazdirabiliriz.
+    // 3. Tum dropdown seceneklerini nasil print ederiz?
+    // -Tum dropdown elementlerini getOptions() methodu ile listeye koyariz sonra secenekleri loop ile yazdirabiliriz.
     // 4. Bir secenegin secili oldugunu otomate etmek icin ne yapilir?
     // getFirstSelectedOption() secili olan secenegi return eder.
     
