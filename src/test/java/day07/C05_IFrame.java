@@ -12,8 +12,8 @@ public class C05_IFrame extends TestBase {
     // //iframe bununla sayfada kac tane iframe oldugunu bulabilirsin.
     // switchTo() method’u ile iframe’e gecmenin 3 yolu vardir;
     // driver.switchTo().frame(index of the iframe);
-    // driver.switchTo( ).frame("id or name value of the iframe");
-    // driver.switchTo( ).frame(WebElement of the iframe);
+    // driver.switchTo().frame("id or name value of the iframe");
+    // driver.switchTo().frame(WebElement of the iframe);
     // Iframe’den cikmak icin 2 komut vardir;
     // driver.switchTo().parentFrame();	1 ust seviyedeki frame’e cikartir
     // driver.switchTo().defaultContent();  En ustteki frame’e cikmak icin kullanilir.
@@ -48,14 +48,14 @@ public class C05_IFrame extends TestBase {
     ————————————
     Explain how you can switch back to a main page? Tekrar ana sayfaya nasil donersin?
     *** 2 farkli yol vardır;
-    *** defaultContent() yada parentFrame() metotlarını kullarak gecis yapabiliriz.
+    *** defaultContent() ya da parentFrame() metotlarını kullarak gecis yapabiliriz.
     ———————————-
     What is the difference between defaultContent and parentFrame? defaultContent ve parentFrame arasindaki farklar nelerdir?
     *** Oncelikle her ikiside frame in disina cikmamizi saglar. Ama defaultContent() direk ana sayfaya atlatır, parentFrame() ise bir üst seviyeye atlatir.
     —————————————
     What might be the reason for your test case to fail? Bir test case in fail etme sebepleri neler olabilir?
     1. Yanlis locator. Cozum: Tekrar element i locate etmek. Değişken element var ise ona gore dynamic bir xpath yazarız.
-    2. Wait/Syncronization/Bekleme problemi: Cozum: implicit wait de yeterli sure oldugundan emin oluruz. Verilen sureyi arttırabiliriz. Explicit wait kullanilabilir.
+    2. Wait/Synchronization/Bekleme problemi: Cozum: implicit wait de yeterli sure oldugundan emin oluruz. Verilen sureyi arttırabiliriz. Explicit wait kullanilabilir.
     3. Iframe. Cozum: switch to iframe
     4. Alert. Cozum: switch to alert
     5. New window(Yeni pencere): switch to window
