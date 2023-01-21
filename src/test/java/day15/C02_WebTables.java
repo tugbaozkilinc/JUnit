@@ -1,5 +1,8 @@
 package day15;
 
+import day18.C02_Log4J;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,6 +15,7 @@ public class C02_WebTables extends TestBase {
     // Bir Web sayfasindaki webelementleri duzenlemek icin HTML tablo oluşturabiliriz
     // HTML tablo farkli sekillerde olusturulabilir ama genellikle <table>, <theader>, <tbody>, <tr>(satir), <th>(basliktaki hucre) ve <td>(body deki hucre) attribute’leri kullanilir.
 
+    private static Logger logger = LogManager.getLogger(C02_WebTables.class.getName());
     @Test
     public void table1Print() {
         // //table[@id='table1']//thead//tr , //table[@id='table1']//thead  basligi(ilk satiri) verir
@@ -23,7 +27,8 @@ public class C02_WebTables extends TestBase {
 
         // Task 1 : Table1’i print edin
         String table1 = driver.findElement(By.xpath("//table[@id='table1']")).getText();
-        System.out.println(table1);
+        logger.info(table1);
+        //System.out.println(table1);
 
         List<WebElement> list = driver.findElements(By.xpath("//table[@id='table1']//td"));
         list.forEach(t -> System.out.println(t.getText()));

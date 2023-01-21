@@ -167,14 +167,9 @@ public class TestBase {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
     }
 
-    //   SCREENSHOTS
     public void takeScreenShotOfPage() {
-//        1. Take screenshot
         File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//       2. Save screenshot
-//        getting the current time as string to use in teh screenshot name, previous screenshots will be kept
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-//        Path of screenshot save folder               folder / folder    /file name
         String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
         try {
             FileUtils.copyFile(image,new File(path));
@@ -183,17 +178,42 @@ public class TestBase {
         }
     }
 
-    //    SCREENSHOT
-//    @params: WebElement
-//    takes screenshot
     public void takeScreenshotOfElement(WebElement element) throws IOException {
-//        1. take screenshot
         File image = element.getScreenshotAs(OutputType.FILE);
-//        2. save screenshot
-//        path
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
         FileUtils.copyFile(image,new File(path));
+    }
+
+    public void scrollIntoViewJS(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void scrollEndJS(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
+
+    public void scrollTopJS(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+    }
+
+    public void clickByJS(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public void typeWithJS(WebElement element, String text){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].setAttribute('value', '" + text + "');", element);
+    }
+
+    public void getValueByJS(String idOfElement) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String text = js.executeScript("return document.getElementById('" + idOfElement + "').value").toString();
+        System.out.println("The value in the box is: " + text);
     }
 
 }
