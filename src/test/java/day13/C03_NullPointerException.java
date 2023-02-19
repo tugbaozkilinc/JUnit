@@ -15,20 +15,16 @@ public class C03_NullPointerException {
     Faker faker = new Faker();
     */
 
-    // WebDriver driver = new ChromeDriver() yapmadığımız için NullPointerException hatasını alıyoruz.
-    // atama yapılmadığı için sadece WebDriver driver; şeklinde bıraktığımız için NullPointerException hatasını alıyoruz.
-
     WebDriver driver;
     Faker faker;
     @Test
     public void nullPointerExceptionTest() {
-        driver.get("https://www.techproeducation.com"); // NullPointerException hatasını alıyoruz.
+        driver.get("https://www.techproeducation.com"); //WebDriver driver = new ChromeDriver() yapmadığımız için NullPointerException hatasını alıyoruz.
     }
 
-    // Faker objesini oluşturup new Faker(); demediğimiz için NullPointerException hatasını alıyoruz.
     @Test
     public void nullPointerExceptionTest2() {
-        System.out.println(faker.name().fullName()); // NullPointerException hatasını alıyoruz.
+        System.out.println(faker.name().fullName()); //Faker objesini oluşturup new Faker(); demediğimiz için NullPointerException hatasını alıyoruz.
     }
 
 }

@@ -12,14 +12,14 @@ public class Homework01 extends TestBase {
 
     @Test
     public void fileDownloadTest() {
-        // https://the-internet.herokuapp.com/download adresine gidelim.
+        //https://the-internet.herokuapp.com/download adresine gidelim.
         driver.get("https://the-internet.herokuapp.com/download");
 
-        // LambdaTest.txt dosyasını indirelim
+        //LambdaTest.txt dosyasını indirelim
         driver.findElement(By.xpath("//*[text()='LambdaTest.txt']")).click();
         waitFor(3);
 
-        // Dosyanın başarıyla indirilip indirilmediğini test edelim
+        //Dosyanın başarıyla indirilip indirilmediğini test edelim
         String path = System.getProperty("user.home") + "\\Downloads\\LambdaTest.txt";
         Assert.assertTrue(Files.exists(Paths.get(path)));
     }

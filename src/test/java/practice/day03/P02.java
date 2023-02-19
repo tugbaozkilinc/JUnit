@@ -15,7 +15,6 @@ import java.time.Duration;
 public class P02 {
 
     WebDriver driver;
-
     @Before
     public void setUp() throws Exception {
         WebDriverManager.chromedriver().setup();
@@ -26,15 +25,15 @@ public class P02 {
 
     @Test
     public void test01() throws InterruptedException {
-        // https://demo.guru99.com/test/radio.html adresine gidin
+        //https://demo.guru99.com/test/radio.html adresine gidin
         driver.get("https://demo.guru99.com/test/radio.html");
 
-        // checkbox elementlerini locate edin
+        //checkbox elementlerini locate edin
         WebElement checkbox1 = driver.findElement(By.id("vfb-6-0"));
         WebElement checkbox2 = driver.findElement(By.id("vfb-6-1"));
         WebElement checkbox3 = driver.findElement(By.id("vfb-6-2"));
 
-        // checkbox1 ve checkbox3  secili degil ise secin
+        //checkbox1 ve checkbox3  secili degil ise secin
         if (!checkbox1.isSelected()){
             checkbox1.click();
         }
@@ -42,11 +41,11 @@ public class P02 {
             checkbox3.click();
         }
 
-        // checkbox1 ve checkbox3 elementlerinin secili oldugunu Test edin
+        //checkbox1 ve checkbox3 elementlerinin secili oldugunu Test edin
         Assert.assertTrue(checkbox1.isSelected());
         Assert.assertTrue(checkbox3.isSelected());
 
-        // checkbox2 elementinin secili olmadıgını test edin
+        //checkbox2 elementinin secili olmadıgını test edin
         Assert.assertFalse(checkbox2.isSelected());
     }
 

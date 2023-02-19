@@ -12,16 +12,16 @@ public class C01_Faker extends TestBase {
 
     @Test
     public void test01() {
-        // 'https://www.facebook.com' sayfasina gidiniz
+        //'https://www.facebook.com' sayfasina gidiniz
         driver.get("https://www.facebook.com");
 
-        // yeni hesap olustur butonuna basin
+        //yeni hesap olustur butonuna basin
         driver.findElement(By.xpath("(//*[@role='button'])[2]")).click();
 
-        // isim kutusunu locate ediniz
+        //isim kutusunu locate ediniz
         WebElement element = driver.findElement(By.xpath("//input[@name='firstname']"));
 
-        // geriye kalan alanlari TAB ile dolasarak faker bilgilerle formu doldurun
+        //geriye kalan alanlari TAB ile dolasarak faker bilgilerle formu doldurun
         Faker faker = new Faker();
         Actions actions = new Actions(driver);
         actions.click(element).sendKeys(faker.name().firstName(), Keys.TAB, faker.name().lastName(), Keys.TAB, "angela@gmail.com", Keys.TAB, "angela@gmail.com",

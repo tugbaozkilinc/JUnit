@@ -1,7 +1,8 @@
 package day18;
 
 public class Tools {
-    // Diller(Languages):
+
+    //Diller(Languages):
     //JAVA, Lamda, xml, SQL, HTML, CSS, …
     //Frameworks:
     //JUnit(gorduk), TestNG(Basliyoruz), Cucumber(Ogrenecez)
@@ -33,4 +34,5 @@ public class Tools {
     //Jenkins
     //Selenium Grid
     //Git, Github, Bitbucket, AWC E2E
+
 }

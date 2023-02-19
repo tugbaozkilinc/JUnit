@@ -12,14 +12,14 @@ public class Homework01 extends TestBase {
 
     @Test
     public void webTables() {
-        // https://www.way2automation.com/angularjs-protractor/webtables/
+        //https://www.way2automation.com/angularjs-protractor/webtables/
         driver.get("https://www.way2automation.com/angularjs-protractor/webtables/");
 
-        // tüm E-mail leri yazdırın
+        //tüm E-mail leri yazdırın
         List<WebElement> list = driver.findElements(By.xpath("//table[@rows='rowCollection']//tbody//tr//td[7]"));
         list.forEach(t -> System.out.println(t.getText()));
 
-        // Tüm E-maillerin "@" işareti içerdiğini doğrulayin
+        //Tüm E-maillerin "@" işareti içerdiğini doğrulayin
         int counter = 0;
         for (WebElement webElement : list) {
             if (webElement.getText().contains("@")) {

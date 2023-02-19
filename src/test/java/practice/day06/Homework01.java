@@ -10,10 +10,10 @@ public class Homework01 extends TestBase {
 
     @Test
     public void test01() {
-        // - http://szimek.github.io/signature_pad/ sayfasına gidiniz
+        //http://szimek.github.io/signature_pad/ sayfasına gidiniz
         driver.get("http://szimek.github.io/signature_pad/");
 
-        // - Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
+        //Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
         WebElement canvas = driver.findElement(By.xpath("//canvas"));
         Actions actions = new Actions(driver);
         actions.moveToElement(canvas).clickAndHold();
@@ -28,7 +28,7 @@ public class Homework01 extends TestBase {
         }
         actions.release().build().perform();
 
-        // - Cizimden sonra clear butonuna basiniz.
+        //Cizimden sonra clear butonuna basiniz.
         waitFor(5);
         driver.findElement(By.xpath("//*[text()='Clear']")).click();
     }

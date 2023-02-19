@@ -14,16 +14,16 @@ public class C01_FluentWait extends TestBase {
 
     @Test
     public void fluentWaitTest() {
-        // https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver sayfasına gidelim
+        //https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver sayfasına gidelim
         driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
 
-        // Click me, to open an ... butonuna basalım
+        //Click me, to open an ... butonuna basalım
         WebElement element = driver.findElement(By.xpath("//*[@id='alert']"));
         element.click();
         FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).pollingEvery(Duration.ofSeconds(2));
-        wait.until(ExpectedConditions.alertIsPresent()); // Alert cikana kadar bekle
+        wait.until(ExpectedConditions.alertIsPresent()); //Alert cikana kadar bekle
 
-        // Çıkan alert'i kapatalım
+        //Çıkan alert'i kapatalım
         driver.switchTo().alert().accept();
     }
 

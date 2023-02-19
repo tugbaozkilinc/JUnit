@@ -14,33 +14,33 @@ public class Homework04 extends TestBase {
 
     @Test
     public void test01() {
-        // 1. "http://webdriveruniversity.com/" adresine gidin
+        //1. "http://webdriveruniversity.com/" adresine gidin
         driver.get("http://webdriveruniversity.com/");
         String firstWindowHandle = driver.getWindowHandle();
 
-        // 2. "Login Portal" a  kadar asagi inin
-        // 3. "Login Portal" a tiklayin
+        //2. "Login Portal" a  kadar asagi inin
+        //3. "Login Portal" a tiklayin
         driver.findElement(By.xpath("//h1[text()='LOGIN PORTAL']")).click();
 
-        // 4. Diger windows'a gecin
+        //4. Diger windows'a gecin
         Set<String> windowHandles = driver.getWindowHandles();
         windowHandles.stream().filter(t -> !t.equals(firstWindowHandle)).forEach(t -> driver.switchTo().window(t));
 
-        // 5. "username" ve "password" kutularina deger yazdirin
-        // 6. "login" butonuna basin
+        //5. "username" ve "password" kutularina deger yazdirin
+        //6. "login" butonuna basin
         Faker faker = new Faker();
         driver.findElement(By.xpath("//*[@id='text']")).sendKeys(faker.name().username(), Keys.TAB, faker.internet().password(), Keys.TAB, Keys.ENTER);
 
-        // 7. Popup'ta cikan yazinin "validation failed" oldugunu test edin
+        //7. Popup'ta cikan yazinin "validation failed" oldugunu test edin
         Assert.assertEquals("validation failed", driver.switchTo().alert().getText());
 
-        // 8. Ok diyerek Pop up'i kapatin
+        //8. Ok diyerek Pop up'i kapatin
         driver.switchTo().alert().accept();
 
-        // 9. Ilk sayfaya geri donun
+        //9. Ilk sayfaya geri donun
         driver.switchTo().window(firstWindowHandle);
 
-        // 10. Ilk sayfaya donuldugunu test edin
+        //10. Ilk sayfaya donuldugunu test edin
         Assert.assertEquals("http://webdriveruniversity.com/", driver.getCurrentUrl());
     }
 

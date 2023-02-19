@@ -24,7 +24,6 @@ import java.util.NoSuchElementException;
 public class TestBase {
 
     protected static WebDriver driver;
-
     @Before
     public void setUp() throws Exception {
         WebDriverManager.chromedriver().setup();
@@ -36,7 +35,7 @@ public class TestBase {
     @After
     public void tearDown() throws Exception {
         waitFor(5);
-        //driver.quit();
+        driver.quit();
     }
 
     public static void switchToWindow(String targetTitle) {
@@ -63,50 +62,41 @@ public class TestBase {
         }
     }
 
-    // ACTIONS_RIGHT CLICK
     public static void rightClickOnElementActions(WebElement element) {
         Actions actions = new Actions(driver);
         actions.contextClick(element).perform();
     }
 
-    // ACTIONS_DOUBLE CLICK
     public static void doubleClick(WebElement element) {
         new Actions(driver).doubleClick(element).build().perform();
     }
 
-    // ACTIONS_HOVER_OVER
     public static void hoverOverOnElementActions(WebElement element) {
         new Actions(driver).moveToElement(element).perform();
     }
 
-    // ACTIONS_SCROLL_DOWN
     public static void scrollDownActions() {
         new Actions(driver).sendKeys(Keys.PAGE_DOWN).perform();
     }
 
-    // ACTIONS_SCROLL_UP
     public static void scrollUpActions() {
         new Actions(driver).sendKeys(Keys.PAGE_UP).perform();
     }
 
-    // ACTIONS_SCROLL_RIGHT
     public static void scrollRightActions(){
         new Actions(driver).sendKeys(Keys.ARROW_RIGHT).sendKeys(Keys.ARROW_RIGHT).perform();
     }
 
-    // ACTIONS_SCROLL_LEFT
     public static void scrollLeftActions(){
         new Actions(driver).sendKeys(Keys.ARROW_LEFT).sendKeys(Keys.ARROW_LEFT).perform();
     }
 
-    // ACTIONS_DRAG_AND_DROP
     public static void dragAndDropActions(WebElement source, WebElement target) {
-        new Actions(driver).dragAndDrop(source,target).perform();
+        new Actions(driver).dragAndDrop(source, target).perform();
     }
 
-    // ACTIONS_DRAG_AND_DROP_BY
     public static void dragAndDropActions(WebElement source, int x, int y) {
-        new Actions(driver).dragAndDropBy(source,x,y).perform();
+        new Actions(driver).dragAndDropBy(source, x, y).perform();
     }
 
     public static WebElement waitForVisibility(WebElement element, int timeout) {
@@ -140,7 +130,7 @@ public class TestBase {
         }
     }
 
-    // This can be used when a new page opens
+    //This can be used when a new page opens
     public static void waitForPageToLoad(long timeout) {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
@@ -157,11 +147,10 @@ public class TestBase {
         }
     }
 
-    // params : xpath of element, max timeout in seconds, polling in second
     public static WebElement fluentWait(String xpath, int withTimeout, int pollingEvery) {
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(withTimeout)) // Wait 3 second each time
-                .pollingEvery(Duration.ofSeconds(pollingEvery)) // Check for the element every 1 second
+                .withTimeout(Duration.ofSeconds(withTimeout))
+                .pollingEvery(Duration.ofSeconds(pollingEvery))
                 .withMessage("Ignoring No Such Element Exception")
                 .ignoring(NoSuchElementException.class);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
@@ -170,7 +159,7 @@ public class TestBase {
     public void takeScreenShotOfPage() {
         File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
+        String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + "image.png";
         try {
             FileUtils.copyFile(image,new File(path));
         } catch (IOException e) {
@@ -181,8 +170,8 @@ public class TestBase {
     public void takeScreenshotOfElement(WebElement element) throws IOException {
         File image = element.getScreenshotAs(OutputType.FILE);
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
-        FileUtils.copyFile(image,new File(path));
+        String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + "image.png";
+        FileUtils.copyFile(image, new File(path));
     }
 
     public void scrollIntoViewJS(WebElement element){

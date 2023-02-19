@@ -6,8 +6,8 @@ import utilities.TestBase;
 
 public class C01_TestBaseDemo extends TestBase {
 
-    // TestBase, testlerden önce ve sonra tekrar tekrar kullandığımız kodları içermektedir. İçerisindeki metodları kullanabilmemiz icin extends yapıyoruz.
-    // Bu sayede test class’ımızda sadece test case’ler bulunmaktadır.
+    //TestBase, testlerden önce ve sonra tekrar tekrar kullandığımız kodları içermektedir. İçerisindeki method ları kullanabilmek icin extends yapıyoruz.
+    //Bu sayede test class’ımızda sadece test case’ler bulunmaktadır.
 
     /*
       UTILITIES
@@ -23,7 +23,7 @@ public class C01_TestBaseDemo extends TestBase {
 
     @Test
     public void test01() {
-        // techproeducation ana sayfasina gidip, title in Bootcamps kelimesini icerdigini test edelim.
+        //techproeducation ana sayfasina gidip, title in Bootcamps kelimesini icerdigini test edelim.
         driver.get("https://techproeducation.com");
         String pageTitle = driver.getTitle();
         Assert.assertTrue(pageTitle.contains("Bootcamps"));

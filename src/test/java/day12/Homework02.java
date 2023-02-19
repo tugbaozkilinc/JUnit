@@ -14,21 +14,21 @@ public class Homework02 extends TestBase {
 
     @Test
     public void isEnabled() {
-        // https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
+        //https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
 
-        // Textbox’in etkin olmadigini(enabled) dogrulayın
+        //Textbox’in etkin olmadigini(enabled) dogrulayın
         Assert.assertFalse(driver.findElement(By.xpath("//*[@type='text']")).isEnabled());
 
-        // Enable butonuna tıklayın ve textbox etkin oluncaya kadar bekleyin
+        //Enable butonuna tıklayın ve text box etkin oluncaya kadar bekleyin
         driver.findElement(By.xpath("//*[text()='Enable']")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
-        // “It’s enabled!” mesajinin goruntulendigini dogrulayın.
+        //“It’s enabled!” mesajinin goruntulendigini dogrulayın.
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='message']")));
         Assert.assertTrue(element.isDisplayed());
 
-        // Textbox’in etkin oldugunu(enabled) dogrulayın.
+        //Textbox’in etkin oldugunu(enabled) dogrulayın.
         Assert.assertTrue(driver.findElement(By.xpath("//*[@type='text']")).isEnabled());
     }
 

@@ -9,6 +9,7 @@ import utilities.TestBase;
 import java.util.List;
 
 public class C04_Exception extends TestBase {
+
     /*
     **NO_SUCH_ELEMENT_EXCEPTION:
     Sayfada bulunmayan bir elemente erişim sağlanmaya çalışıldığında karşılaşılır
@@ -20,7 +21,7 @@ public class C04_Exception extends TestBase {
     Olmayan bir uyarı/pop-up şeklindeki diyalog üzerinde işlem yapılmaya çalışıldığında karşılaşılır.
     **ELEMENT_NOT_VISIBLE_EXCEPTION:
     WebDriver, sayfa tamamen yüklenmeden önce web sayfasında bir öğe bulmaya çalışırsa, ElementNotVisibleException hatası verir. Bu hatayı önlemek için bekleme komutları eklenir.
-    En ideali implicitly wait'dir.
+    En ideali implicit wait'dir.
     **TIME_OUT_EXCEPTION:
     Sayfada aradığımız elementi wait ile belirttiğimiz max. sürede, bulamadığı durumda selenium.TimeoutException fırlatacaktır.
     **NULL_POINTER_EXCEPTION :
@@ -34,14 +35,14 @@ public class C04_Exception extends TestBase {
 
     @Test
     public void exceptionTest() {
-        // Amazon sayfasina gidelim
+        //Amazon sayfasina gidelim
         driver.get("https://www.amazon.com");
 
-        // iphone aratalim
+        //iphone aratalim
         driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']")).sendKeys("iphone", Keys.ENTER);
 
-        // Cikan urunlerde sadece Apple Iphone yazanlari tiklayalim
-        List<WebElement> products = driver.findElements(By.partialLinkText("Apple iPhone")); // text icinde Apple iPhone yazisi gecenleri alacak //span[contains(text(),'Apple iPhone')]
+        //Cikan urunlerde sadece 'Apple Iphone' yazanlari tiklayalim
+        List<WebElement> products = driver.findElements(By.partialLinkText("Apple iPhone")); //text icinde Apple iPhone yazisi gecenleri alacak //span[contains(text(),'Apple iPhone')]
         for (int i = 0; i < products.size(); i++) {
             products = driver.findElements(By.partialLinkText("Apple iPhone"));
             products.get(i).click();

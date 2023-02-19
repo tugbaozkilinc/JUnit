@@ -10,10 +10,10 @@ public class Homework03 extends TestBase {
 
     @Test
     public void dragAndDropTest() {
-        // go to url : http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+        //go to url : http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
         driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
 
-        // #Fill in capitals by country
+        //#Fill in capitals by country
         Actions actions = new Actions(driver);
         WebElement washington = driver.findElement(By.xpath("(//*[text()='Washington'])[2]"));
         WebElement unitedStates = driver.findElement(By.xpath("//*[text()='United States']"));

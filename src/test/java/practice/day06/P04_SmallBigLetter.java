@@ -10,10 +10,10 @@ public class P04_SmallBigLetter extends TestBase {
 
     @Test
     public void test01() {
-        // Google sayfasina gidelim
+        //Google sayfasina gidelim
         driver.get("https://www.google.com");
 
-        // Buyuk kucuk harf olacak sekilde HeLlo yazdiralim
+        //Buyuk kucuk harf olacak sekilde HeLlo yazdiralim(HeLlo)
         WebElement searchBox = driver.findElement(By.xpath("//*[@class='gLFyf']"));
         searchBox.sendKeys(Keys.SHIFT, "h", Keys.SHIFT, "e", Keys.SHIFT, "l", Keys.SHIFT, "l", "o");
     }

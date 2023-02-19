@@ -18,32 +18,31 @@ public class P04 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        // http://the-internet.herokuapp.com/add_remove_elements/ adresine gidiniz
+        //http://the-internet.herokuapp.com/add_remove_elements/ adresine gidiniz
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
 
-        // Add Element butonuna 100 defa basınız
+        //Add Element butonuna 100 defa basınız
         WebElement element = driver.findElement(By.cssSelector("button[onclick='addElement()']"));
         for (int i = 0; i<100; i++){
             element.click();
         }
 
-        // 100 defa basıldığını test ediniz
+        //100 defa basıldığını test ediniz
         List<WebElement> deleteButton = driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
         Assert.assertEquals(100, deleteButton.size());
 
-        // 90 defa delete butonuna basınız
+        //90 defa delete butonuna basınız
         for (int i = 0; i<90; i++){
             driver.findElement(By.cssSelector("button[onclick='deleteElement()']")).click();
         }
 
-        // 90 defa basıldığını doğrulayınız
+        //90 defa basıldığını doğrulayınız
         List<WebElement> deleteElementList = driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
         int deleteElement = deleteButton.size()-90;
         Assert.assertEquals(deleteElement, deleteElementList.size());
 
-        // Sayfayı kapatınız
+        //Sayfayı kapatınız
         driver.close();
-
     }
+
 }

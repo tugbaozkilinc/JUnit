@@ -16,11 +16,7 @@ import java.util.List;
 
 public class P01 {
 
-    // ** INTERVIEW QUESTION ** implicitlyWait() nereden gelir? -> Selenium
-    //                          Thread.sleep() nereden gelir -> Java
-
     WebDriver driver;
-
     @Before
     public void setUp() throws Exception {
         WebDriverManager.chromedriver().setup();
@@ -31,25 +27,25 @@ public class P01 {
 
     @Test
     public void test01() throws InterruptedException {
-        // https://the-internet.herokuapp.com/dropdown adresine gidin.
+        //https://the-internet.herokuapp.com/dropdown adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dropdown");
 
-        // Index kullanarak Option 1 seçin ve sectiginiz option'u yazdırın
+        //Index kullanarak Option 1 seçin ve sectiginiz option'u yazdırın
         WebElement option = driver.findElement(By.xpath("//select[@id='dropdown']"));
         Select optionDropdown = new Select(option);
         optionDropdown.selectByIndex(1);
         System.out.println(optionDropdown.getFirstSelectedOption().getText());
         Thread.sleep(2000);
 
-        // Value kullanarak Option 2 seçin ve sectiginiz option'u yazdırın
+        //Value kullanarak Option 2 seçin ve sectiginiz option'u yazdırın
         optionDropdown.selectByValue("2");
         System.out.println(optionDropdown.getFirstSelectedOption().getText());
 
-        // Visible Text kullanarak Option 1 seçin ve sectiginiz option'u yazdırın
+        //Visible Text kullanarak Option 1 seçin ve sectiginiz option'u yazdırın
         optionDropdown.selectByVisibleText("Option 1");
         System.out.println(optionDropdown.getFirstSelectedOption().getText());
 
-        // Tüm option'ları yazdırın
+        //Tüm option'ları yazdırın
         List<WebElement> list = optionDropdown.getOptions();
         int counter = 1;
         for (WebElement w : list){
@@ -57,7 +53,7 @@ public class P01 {
             counter++;
         }
 
-        // dropdown'daki optionlarin toplam sayısının 3'e esit oldugunu test edin
+        //dropdown'daki optionlarin toplam sayısının 3'e esit oldugunu test edin
         Assert.assertEquals(3, list.size());
     }
 

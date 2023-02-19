@@ -20,12 +20,12 @@ public class P05 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
-    // BeforeClass ile driver ı olusturun ve Maximize edin, 15 sn bekletin
-    // http://www.google.com adresine gidin
-    // arama kutusuna "The God Father" yazip, cikan sonuc sayisini yazdirin
-    // arama kutusuna  "Lord of the Rings" yazip, cikan sonuc sayisini yazdirin
-    // arama kutusuna  "Kill Bill" yazip, cikan sonuc sayisini yazdirin
-    // AfterClass ile kapatın
+    //BeforeClass ile driver ı olusturun ve Maximize edin, 15 sn bekletin
+    //http://www.google.com adresine gidin
+    //arama kutusuna "The God Father" yazip, cikan sonuc sayisini yazdirin
+    //arama kutusuna  "Lord of the Rings" yazip, cikan sonuc sayisini yazdirin
+    //arama kutusuna  "Kill Bill" yazip, cikan sonuc sayisini yazdirin
+    //AfterClass ile kapatın
 
     @Before
     public void setUp() throws Exception {
@@ -55,6 +55,7 @@ public class P05 {
 
     @AfterClass
     public static void afterClass() throws Exception {
-        driver.close();
+        driver.quit();
     }
+
 }

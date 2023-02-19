@@ -16,7 +16,6 @@ import java.time.Duration;
 public class Homework03 {
 
     static WebDriver driver;
-
     @BeforeClass
     public static void beforeClass() {
         WebDriverManager.chromedriver().setup();
@@ -26,19 +25,19 @@ public class Homework03 {
         driver.get("http://zero.webappsecurity.com/");
     }
 
-    // http://zero.webappsecurity.com/ Adresine gidin
-    // Sign in butonuna basin
-    // Login kutusuna “username” yazin
-    // Password kutusuna “password.” yazin
-    // Sign in tusuna basin
-    // Pay Bills sayfasina gidin
-    // “Purchase Foreign Currency” tusuna basin
-    // “Currency” drop down menusunden Eurozone’u secin
-    // “amount” kutusuna bir sayi girin
-    // “US Dollars” in secilmedigini test edin
-    // “Selected currency” butonunu secin
-    // “Calculate Costs” butonuna basin sonra “purchase” butonuna basin
-    // “Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin.
+    //http://zero.webappsecurity.com/ Adresine gidin
+    //Sign in butonuna basin
+    //Login kutusuna “username” yazin
+    //Password kutusuna “password.” yazin
+    //Sign in tusuna basin
+    //Pay Bills sayfasina gidin
+    //“Purchase Foreign Currency” tusuna basin
+    //“Currency” drop down menusunden Eurozone’u secin
+    //“amount” kutusuna bir sayi girin
+    //“US Dollars” in secilmedigini test edin
+    //“Selected currency” butonunu secin
+    //“Calculate Costs” butonuna basin sonra “purchase” butonuna basin
+    //“Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin.
 
     @Test
     public void test01() throws InterruptedException {
@@ -60,11 +59,12 @@ public class Homework03 {
         driver.findElement(By.id("purchase_cash")).click();
         String actualStatement = driver.findElement(By.xpath("//*[text()='Foreign currency cash was successfully purchased.']")).getText();
         String expectedStatement = "Foreign currency cash was successfully purchased.";
-        Assert.assertEquals(actualStatement, expectedStatement);
+        Assert.assertEquals(expectedStatement, actualStatement);
     }
 
     @AfterClass
     public static void afterClass() throws Exception {
         driver.close();
     }
+
 }

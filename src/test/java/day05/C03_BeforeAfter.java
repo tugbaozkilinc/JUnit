@@ -12,7 +12,6 @@ import java.time.Duration;
 public class C03_BeforeAfter {
 
     WebDriver driver;
-
     @Before
     public void setUp() {
         WebDriverManager.chromedriver().setup();

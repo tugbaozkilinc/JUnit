@@ -19,7 +19,6 @@ import java.util.List;
 public class Homework02 {
 
     static WebDriver driver;
-
     @BeforeClass
     public static void beforeClass() {
         WebDriverManager.chromedriver().setup();
@@ -29,14 +28,14 @@ public class Homework02 {
         driver.get("https://www.amazon.com/");
     }
 
-    // https://www.amazon.com/ adresine gidin.
-    // Test 1:
-    // Arama kutusunun yanindaki kategori menusundeki kategori sayisinin 45 oldugunu test edin
-    // Test 2:
-    // Kategori menusunden Books secenegini secin
-    // Arama kutusuna Java yazin ve aratin
-    // Bulunan sonuc sayisini yazdirin
-    // Sonucun Java kelimesini icerdigini test edin
+    //https://www.amazon.com/ adresine gidin.
+    //Test 1:
+    //Arama kutusunun yanindaki kategori menusundeki kategori sayisinin 45 oldugunu test edin
+    //Test 2:
+    //Kategori menusunden Books secenegini secin
+    //Arama kutusuna Java yazin ve aratin
+    //Bulunan sonuc sayisini yazdirin
+    //Sonucun Java kelimesini icerdigini test edin
 
     @Test
     public void test01() throws InterruptedException {
@@ -44,7 +43,7 @@ public class Homework02 {
         Select searchBoxDropdown = new Select(searchBox);
         List<WebElement> listSearchBoxDropdown = searchBoxDropdown.getOptions();
         int listSize = listSearchBoxDropdown.size();
-        Assert.assertEquals(listSize, 28);
+        Assert.assertEquals(28, listSize);
         searchBoxDropdown.selectByVisibleText("Books");
         Thread.sleep(3000);
         searchBoxDropdown.selectByVisibleText("All Departments");
@@ -60,4 +59,5 @@ public class Homework02 {
     public static void afterClass() {
         driver.close();
     }
+
 }

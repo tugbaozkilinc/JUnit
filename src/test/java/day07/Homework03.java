@@ -11,19 +11,19 @@ public class Homework03 extends TestBase {
 
     @Test
     public void test01() throws InterruptedException {
-        // 1-https://rahulshettyacademy.com/AutomationPractice/ adresine gidin
+        //1-https://rahulshettyacademy.com/AutomationPractice/ adresine gidin
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
-        // 2-Dropdown Example menüsünün görünür olduğunu doğrulayın.
+        //2-Dropdown Example menüsünün görünür olduğunu doğrulayın.
         WebElement option = driver.findElement(By.cssSelector("select[id='dropdown-class-example']"));
         Select optionDropdown = new Select(option);
         Assert.assertTrue(option.isDisplayed());
 
-        // 3-Option3 ü seçin.
+        //3-Option3 ü seçin.
         optionDropdown.selectByVisibleText("Option3");
         Thread.sleep(3000);
 
-        // 4-Option3 ün seçili olduğunu doğrulayın.
+        //4-Option3 ün seçili olduğunu doğrulayın.
         Assert.assertEquals("Option3", optionDropdown.getFirstSelectedOption().getText());
     }
 

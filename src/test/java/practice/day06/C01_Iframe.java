@@ -16,23 +16,23 @@ public class C01_Iframe extends TestBase {
 
     @Test
     public void name() {
-        // https://html.com/tags/iframe sayfasına gidiniz
+        //https://html.com/tags/iframe sayfasına gidiniz
         driver.get("https://html.com/tags/iframe");
 
-        // Videoyu görecek kadar asagiya ininiz
+        //Videoyu görecek kadar asagiya ininiz
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 
-        // Videoyu izlemek icin Play tusuna basiniz
+        //Videoyu izlemek icin Play tusuna basiniz
         driver.switchTo().frame(driver.findElement(By.xpath("(//iframe[@frameborder='0'])[1]")));
         driver.findElement(By.xpath("//*[@aria-label='Play']")).click();
 
-        // Videoyu calistirdiginizi test ediniz
+        //Videoyu calistirdiginizi test ediniz
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@data-sessionlink='feature=player-button']")));
         Assert.assertTrue(element.isDisplayed());
 
-        // 'Powerful, but easy to misuse' yazısının gorunur oldugunu test ediniz
+        //'Powerful, but easy to misuse' yazısının gorunur oldugunu test ediniz
         driver.switchTo().defaultContent();
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Powerful, but easy to misuse']")).isDisplayed());
     }

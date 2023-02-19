@@ -11,10 +11,10 @@ public class C01_Faker extends TestBase {
 
     @Test
     public void fakerTest() {
-        // "https://demoqa.com/automation-practice-form" Adresine gidin
+        //"https://demoqa.com/automation-practice-form" Adresine gidin
         driver.get("https://demoqa.com/automation-practice-form");
 
-        // Formu doldurunuz
+        //Formu doldurunuz
         WebElement element = driver.findElement(By.xpath("//input[@id='firstName']"));
         Faker faker = new Faker();
         element.sendKeys(faker.name().firstName(), Keys.TAB, faker.name().lastName(), Keys.TAB, faker.internet().emailAddress(), Keys.TAB, Keys.ARROW_RIGHT, Keys.SPACE, Keys.TAB,
@@ -24,7 +24,7 @@ public class C01_Faker extends TestBase {
         driver.findElement(By.xpath("//*[@id='currentAddress']")).sendKeys(faker.address().fullAddress(), Keys.TAB, "NCR", Keys.ENTER, Keys.TAB,
                 "Delhi", Keys.TAB, Keys.ENTER);
 
-        // Sayfayi kapatiniz
+        //Sayfayi kapatiniz
         waitFor(2);
         driver.findElement(By.xpath("//*[@id='closeLargeModal']")).click();
     }

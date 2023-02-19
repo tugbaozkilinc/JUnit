@@ -34,8 +34,7 @@ public class C04_BeforeClassAfterClass {
         System.out.println("Ikinci test");
     }
 
-    @Test
-    @Ignore
+    @Test @Ignore
     public void test03() {
         System.out.println("Ucuncu test");
     }

@@ -17,7 +17,6 @@ import java.util.List;
 public class Homework01 {
 
     static WebDriver driver;
-
     @BeforeClass
     public static void beforeClass() {
         WebDriverManager.chromedriver().setup();
@@ -27,12 +26,12 @@ public class Homework01 {
         driver.get("https://the-internet.herokuapp.com/dropdown");
     }
 
-    // https://the-internet.herokuapp.com/dropdown adresine gidin.
-    // 1.Index kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
-    // 2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
-    // 3.Visible Text(Görünen metin) kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
-    // 4.Tüm dropdown değerleri(value) yazdırın
-    // 5. Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True, degilse False yazdırın.
+    //https://the-internet.herokuapp.com/dropdown adresine gidin.
+    //1.Index kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
+    //2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
+    //3.Visible Text(Görünen metin) kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
+    //4.Tüm dropdown değerleri(value) yazdırın
+    //5. Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True, degilse False yazdırın.
 
     @Test
     public void clickOptions() throws InterruptedException {
@@ -55,11 +54,12 @@ public class Homework01 {
         List<WebElement> optionsList = optionsDropdown.getOptions();
         optionsList.forEach(t -> System.out.println(t.getText()));
         int dropdownSize = optionsList.size();
-        Assert.assertEquals(dropdownSize, 3);
+        Assert.assertEquals(3, dropdownSize);
     }
 
     @AfterClass
     public static void afterClass() {
         driver.close();
     }
+
 }
