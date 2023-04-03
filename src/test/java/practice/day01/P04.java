@@ -28,8 +28,8 @@ public class P04 {
         }
 
         //100 defa basıldığını test ediniz
-        List<WebElement> deleteButton = driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
-        Assert.assertEquals(100, deleteButton.size());
+        List<WebElement> deleteButtonList = driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
+        Assert.assertEquals(100, deleteButtonList.size());
 
         //90 defa delete butonuna basınız
         for (int i = 0; i<90; i++){
@@ -38,7 +38,7 @@ public class P04 {
 
         //90 defa basıldığını doğrulayınız
         List<WebElement> deleteElementList = driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));
-        int deleteElement = deleteButton.size()-90;
+        int deleteElement = deleteButtonList.size()-90;
         Assert.assertEquals(deleteElement, deleteElementList.size());
 
         //Sayfayı kapatınız

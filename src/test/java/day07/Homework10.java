@@ -35,6 +35,7 @@ public class Homework10 extends TestBase {
         for (String w : driver.getWindowHandles()){
             if (!w.equals(window1Handle)){
                 driver.switchTo().window(w);
+                break;
             }
         }
         WebElement textNewPage = driver.findElement(By.id("sampleHeading"));

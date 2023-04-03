@@ -12,7 +12,7 @@ public class P02 extends TestBase {
         //go to url: http://demo.automationtesting.in/Alerts.html
         driver.get("http://demo.automationtesting.in/Alerts.html");
 
-        //click  "Alert with OK" and click 'click the button to display an alert box:'
+        //click "Alert with OK" and click 'click the button to display an alert box:'
         driver.findElement(By.xpath("//*[@onclick='alertbox()']")).click();
 
         //accept Alert(I am an alert box!) and print alert on console
@@ -23,7 +23,7 @@ public class P02 extends TestBase {
         driver.findElement(By.xpath("//*[@href='#CancelTab']")).click();
         driver.findElement(By.xpath("//*[@onclick='confirmbox()']")).click();
 
-        //cancel Alert  (Press a Button !)
+        //cancel Alert (Press a Button !)
         driver.switchTo().alert().dismiss();
 
         //click "Alert with Textbox" and click 'click the button to demonstrate the prompt box'

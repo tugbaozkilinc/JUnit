@@ -7,10 +7,7 @@ import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,9 +46,9 @@ public class TestBase {
         driver.switchTo().window(origin);
     }
 
-    public static void switchToWindow(int windowNumber){
+    public static void switchToWindow(int windowIndex){
         List<String> list = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(list.get(windowNumber));
+        driver.switchTo().window(list.get(windowIndex));
     }
 
     public static void waitFor(int seconds){
@@ -148,7 +145,7 @@ public class TestBase {
     }
 
     public static WebElement fluentWait(String xpath, int withTimeout, int pollingEvery) {
-        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+        FluentWait<WebDriver> wait = new FluentWait<>(driver) //Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(withTimeout))
                 .pollingEvery(Duration.ofSeconds(pollingEvery))
                 .withMessage("Ignoring No Such Element Exception")
@@ -157,21 +154,25 @@ public class TestBase {
     }
 
     public void takeScreenShotOfPage() {
-        File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + "image.png";
         try {
-            FileUtils.copyFile(image,new File(path));
+            FileUtils.copyFile(image, new File(path));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void takeScreenshotOfElement(WebElement element) throws IOException {
+    public void takeScreenshotOfElement(WebElement element) {
         File image = element.getScreenshotAs(OutputType.FILE);
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + "image.png";
-        FileUtils.copyFile(image, new File(path));
+        try {
+            FileUtils.copyFile(image, new File(path));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void scrollIntoViewJS(WebElement element){

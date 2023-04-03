@@ -53,10 +53,10 @@ public class C03_ExtentReports extends TestBase {
         //Extent Test objesini olustur
         extentTest = extentReports.createTest("Extent Report Login Test", "Smoke Test Raporu");
         //TUM AYARLAR BITTI. EXTENT TEST OBJESI ILE LOGLAMA(RAPOR YAZDIRMA) ISLEMINI YAPABILIRIM
-        extentTest.pass("Kullanici ana sayfaya gider");
+        extentTest.info("Kullanici ana sayfaya gider");
         driver.get("https://www.techproeducation.com");
         //LMS SAYFASINA GIDELIM
-        extentTest.pass("Kullanici LMS sayfasina gider");
+        extentTest.info("Kullanici LMS sayfasina gider");
         driver.findElement(By.linkText("LMS LOGIN")).click();
         //TEST BITTI
         extentTest.pass("TEST BASARIYLA GERCEKLESTI");

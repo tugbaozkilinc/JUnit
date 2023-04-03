@@ -26,7 +26,7 @@ public class Homework01 extends TestBase {
     }
 
     public void explicitWait(){
-        //Iki tane method olusturun : fluentWait(), explicitWait()
+        //Iki tane method olusturun: fluentWait(), explicitWait()
         //Iki method icin de asagidaki adimlari test edin.
         //https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
@@ -40,7 +40,7 @@ public class Homework01 extends TestBase {
         Assert.assertTrue(element.isDisplayed());
 
         //Add buttonuna basin
-        driver.findElement(By.xpath("//*[text()='Add']")).click();
+        driver.findElement(By.xpath("//*[.='Add']")).click();
 
         //It’s back mesajinin gorundugunu test edin
         WebElement webElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='message']")));
@@ -48,7 +48,7 @@ public class Homework01 extends TestBase {
     }
 
     public void fluentWait(){
-        //Iki tane method olusturun : fluentWait(), explicitWait()
+        //Iki tane method olusturun: fluentWait(), explicitWait()
         //Iki method icin de asagidaki adimlari test edin.
         //https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
@@ -62,7 +62,7 @@ public class Homework01 extends TestBase {
         Assert.assertTrue(element.isDisplayed());
 
         //Add buttonuna basin
-        driver.findElement(By.xpath("//*[text()='Add']")).click();
+        driver.findElement(By.xpath("//*[.='Add']")).click();
 
         //It’s back mesajinin gorundugunu test edin
         WebElement webElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='message']")));

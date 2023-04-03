@@ -21,8 +21,8 @@ public class Homework01 extends TestBase {
 
         //Tüm E-maillerin "@" işareti içerdiğini doğrulayin
         int counter = 0;
-        for (WebElement webElement : list) {
-            if (webElement.getText().contains("@")) {
+        for (WebElement w : list) {
+            if (w.getText().contains("@")) {
                 counter++;
             }
         }

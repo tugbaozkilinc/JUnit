@@ -55,8 +55,7 @@ public class Homework03 extends TestBase {
         driver.get("https://www.amazon.com");
 
         //dropdown’dan bebek bölümüne secin
-        Select searchBoxDropdownNew = new Select(searchBox);
-        searchBoxDropdownNew.selectByVisibleText("Baby");
+        searchBoxDropdown.selectByVisibleText("Baby");
 
         //bebek puset aratıp bulundan sonuç sayısını yazdırın
         searchBox.sendKeys(Keys.TAB, "bebek puset", Keys.ENTER);

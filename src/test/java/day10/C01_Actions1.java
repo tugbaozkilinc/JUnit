@@ -31,7 +31,7 @@ public class C01_Actions1 extends TestBase {
 
         //Acilan sayfada h1 taginda “Elemental Selenium” yazdigini test edelim
         switchToWindow(1);
-        Assert.assertEquals("Elemental Selenium", driver.findElement(By.xpath("//h1")).getText());
+        Assert.assertEquals("Elemental Selenium", driver.findElement(By.tagName("h1")).getText());
     }
 
 }

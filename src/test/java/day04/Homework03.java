@@ -59,6 +59,7 @@ public class Homework03 {
                         "The test the names from displaying list and cart list are equals FAILED";
         System.out.println(result);
 
+        //close the driver
         driver.close();
     }
 

@@ -24,7 +24,7 @@ public class C04_PromptAlert extends TestBase {
         Thread.sleep(5000);
 
         //Result mesajında isminizin görüntülendiğini dogrulayın.
-        String actualResult = driver.findElement(By.id("result")).getText(); // You entered: Ece
+        String actualResult = driver.findElement(By.id("result")).getText(); //You entered: Ece
         String expectedResult = "Ece";
         Assert.assertTrue(actualResult.contains(expectedResult));
         Thread.sleep(5000);

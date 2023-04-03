@@ -19,7 +19,7 @@ public class C02_ExplicitWait extends TestBase {
     //1. Java tabanli wait;
     //Thread.sleep : Javadan gelir ve kodlari yazilan sure kadar bekletir. Sure dolduktan sonra alt satirdan isleme devam eder.
     //2. Selenium tabanli wait’ler;
-    //Selenium tabanli wait’lerde verilen sure max. bekleme suresidir, islem daha once biterse surenin  bitmesi beklenmez, kod calismaya devam eder.
+    //Selenium tabanli wait’lerde verilen sure max. bekleme suresidir, islem daha once biterse surenin bitmesi beklenmez, kod calismaya devam eder.
     //Implicit Wait: Sayfadaki tüm öğeler için global bir zaman aşımıdır(timeout). Genellikle otomasyon frameworklerinde olasi senkronizasyon problemleri icin
     //default olarak implicit wait kullanilir.
     //Explicit Wait: Çoğunlukla nadiren karsimiza cikan ve daha fazla bekleme süresi gerektiren belirli öğeler için belirli bir koşul(expected condition) için kullanılır.
@@ -34,8 +34,8 @@ public class C02_ExplicitWait extends TestBase {
         //Start buttonuna tıkla
         driver.findElement(By.xpath("//div[@id='start']//button")).click();
 
-        //Hello World! Yazının sitede oldugunu test et
-        //Note: implicitlyWait Sayfa daki web element lerin yüklenmesi için bekliyor ama içerde bir butona basınca loading yani bekleme yaparken çalışmıyor.
+        //Hello World! Yazısının sitede oldugunu test et
+        //Note: implicitWait Sayfa daki tum web element lerin yüklenmesi için bekliyor ama içerde bir butona basınca(specific element) loading yani bekleme yaparken çalışmıyor.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement helloWorldElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='finish']//h4")));
         String helloWorldText = helloWorldElement.getText();

@@ -20,7 +20,7 @@ public class C02_FileDownload extends TestBase {
         waitFor(5);
 
         //3. dosyanin basariyla indirilip indirilmedigini test edelim (dosya downloads'a indirilecektir)
-        String path = "C:\\Users\\tugba\\Downloads\\some-file.txt";
+        String path = System.getProperty("user.home") + "\\Downloads\\some-file.txt";
         Assert.assertTrue(Files.exists(Paths.get(path)));
     }
 

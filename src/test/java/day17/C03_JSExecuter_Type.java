@@ -19,18 +19,20 @@ public class C03_JSExecuter_Type extends TestBase {
     }
 
     //Javascript Executor nedir?
-    //Seleniumdan gelen ve javascript kodlarını calistirmaya yarayan bir interface dir. Normal selenium metotları yeterli olmadıgı durumlarda kullanilabilir.
+    //Seleniumdan gelen ve javascript kodlarını calistirmaya yarayan bir interface dir. Normal selenium method ları yeterli olmadıgı durumlarda kullanilabilir.
     //Ne zaman ve nasıl kullandın?
-    //Normal selenium metotları yeterli olmadıgı durumlarda kullanilabilir. Ornegin, bazı buttonlara tıklamada problem olabiliyor, ya da belirli bir web elementin gorunur olacağı
-    //sekilde sayfanın kaydırma islemi, yada input kutularindaki değerleri almak icin kullanilabilir.
+    //Normal selenium method ları yeterli olmadıgı durumlarda kullanilabilir. Ornegin, bazı buttonlara tıklama da problem olabiliyor, ya da belirli bir web elementin gorunur olacağı
+    //sekilde sayfanın kaydırma islemi, ya da input kutularindaki değerleri almak icin kullanilabilir.
     //Sayfayi asagi veya yukarı kaydırma islemi seleniumda nasıl yapılır?
-    //Seleniumdaki Actions yada javascript executor metotları ile kaydırma islemleri yapılabilir. Ornegin, actionslarda page_up, page_down, arrow_up, arrow_down metotlari ile yada js executordaki scrollintoview(true) ile yapılabilir. Ben olusturdugumuz reusable metotlarını kullanarak bu islemlile kolaylıkla yapabiliyorum
+    //Seleniumdaki Actions yada javascript executor method ları ile kaydırma islemleri yapılabilir. Ornegin, actions larda page_up, page_down, arrow_up, arrow_down method lari ile ya da
+    //js executor daki scrollintoview(true) ile yapılabilir. Ben olusturdugumuz reusable method larını kullanarak bu islemleri kolaylıkla yapabiliyorum
     //Bir kutucukdaki(input) elemanın metni nasıl alınabilir?
-    //Javascript executor ile alabiliriz. Cunki js executor ile attribute degerlerini alma imkanımız var. getText() METORU BU DURUMLARDA CALISMAZ.
+    //Javascript executor ile alabiliriz. Cunku js executor ile attribute degerlerini alma imkanımız var. getText() METHOD U BU DURUMLARDA CALISMAZ.
     //Selenium da click yaparken problem yasadigin oldu mu?
-    //Bazen yanlis locator, yada bekleme(wait) problemi gibi durumlarda problem yaşadım. Bazen gizli(hidden) elementlere tiklarkende problem yaşadım. Bu durumlarda javascript executor kullandım ve problemi cozdum.
-    //Selenium atomayonunda ne tur problemler yaşadın?
-    //TEKNIK PROBLEMLER :Yanlis locator,bekleme(wait), alert, iframe, captcha, pop-up seklindeki reklam bildirimleri,multiple window, hidden elementlere tiklama, …
+    //Bazen yanlis locator, ya da bekleme(wait) problemi gibi durumlarda problem yaşadım. Bazen gizli(hidden) elementlere tiklarken de problem yaşadım. Bu durumlarda javascript executor
+    //kullandım ve problemi cozdum.
+    //Selenium automation da ne tur problemler yaşadın?
+    //TEKNIK PROBLEMLER :Yanlis locator, bekleme(wait), alert, iframe, captcha, pop-up seklindeki reklam bildirimleri, multiple window, hidden elementlere tiklama, …
     //TAKIMLA ILGILI PROBLEMLER: (Çok gundeme getirilmemeli). Developer bazen bulduğum hatalari kabul etmiyordu. Cozum: takımla beraber değerlendirip fikir birliğine variyorduk.
 
 }

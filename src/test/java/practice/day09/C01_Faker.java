@@ -18,11 +18,12 @@ public class C01_Faker extends TestBase {
         WebElement element = driver.findElement(By.xpath("//input[@id='firstName']"));
         Faker faker = new Faker();
         element.sendKeys(faker.name().firstName(), Keys.TAB, faker.name().lastName(), Keys.TAB, faker.internet().emailAddress(), Keys.TAB, Keys.ARROW_RIGHT, Keys.SPACE, Keys.TAB,
-                faker.number().digits(10), Keys.TAB, "15 January 2022", Keys.ENTER, Keys.TAB, faker.shakespeare().romeoAndJulietQuote(), Keys.TAB, Keys.TAB, Keys.TAB, Keys.SPACE);
+                         faker.number().digits(10), Keys.TAB, "15 January 2022", Keys.ENTER, Keys.TAB, faker.shakespeare().romeoAndJulietQuote(), Keys.TAB, Keys.TAB, Keys.TAB, Keys.SPACE);
         WebElement upload = driver.findElement(By.xpath("//*[@id='uploadPicture']"));
-        upload.sendKeys("C:\\Users\\tugba\\Desktop\\image.png");
+        String path = System.getProperty("user.home") + "\\Desktop\\image.png";
+        upload.sendKeys(path);
         driver.findElement(By.xpath("//*[@id='currentAddress']")).sendKeys(faker.address().fullAddress(), Keys.TAB, "NCR", Keys.ENTER, Keys.TAB,
-                "Delhi", Keys.TAB, Keys.ENTER);
+                           "Delhi", Keys.TAB, Keys.ENTER);
 
         //Sayfayi kapatiniz
         waitFor(2);

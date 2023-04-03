@@ -41,7 +41,7 @@ public class C05_IFrame extends TestBase {
     }
 
     /*
-    How do you find the number of iframe on a page? Bir sayfadaki toplan iframe sayisini nasil buluruz?
+    How do you find the number of iframe on a page? Bir sayfadaki toplam iframe sayisini nasil buluruz?
     *** Iframe ler iframe tagi kullanılarak oluşturulur. Bu durumda locator kullanarak tum iframe leri bulurum.
     *** driver.findElements(By.tagName(“iframe”));
     *** driver.findElements(By.xpath(“//iframe”));

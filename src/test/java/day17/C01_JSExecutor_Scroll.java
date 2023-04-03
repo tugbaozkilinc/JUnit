@@ -15,9 +15,9 @@ public class C01_JSExecutor_Scroll extends TestBase {
         waitFor(2);
 
         //We Offer elementi gorunur olacak sekilde uzerine scroll et ve ekran goruntusunu al.
-        WebElement element = driver.findElement(By.xpath("//*[text()='we offer']"));
+        WebElement weOffer = driver.findElement(By.xpath("//*[text()='we offer']"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        js.executeScript("arguments[0].scrollIntoView(true);", weOffer);
         waitFor(3);
         takeScreenShotOfPage();
 

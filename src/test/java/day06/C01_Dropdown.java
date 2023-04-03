@@ -16,7 +16,7 @@ import java.util.List;
 
 public class C01_Dropdown {
 
-    static WebDriver driver;
+    WebDriver driver;
     @Before
     public void setUp() {
         WebDriverManager.chromedriver().setup();

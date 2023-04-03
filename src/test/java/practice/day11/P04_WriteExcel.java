@@ -9,10 +9,10 @@ import java.io.IOException;
 
 public class P04_WriteExcel {
 
+    String path = "./src/test/java/resources/data.xlsx";
     @Test
     public void test01() throws IOException {
         //Data isimli excel dosyasına yeni kullanıcı adı ve password ekleyelim
-        String path = "./src/test/java/resources/data.xlsx";
         FileInputStream fileInputStream = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
         Sheet sheet = workbook.getSheet("Sayfa1");
@@ -25,7 +25,6 @@ public class P04_WriteExcel {
     @Test
     public void test02() throws IOException {
         //Yeni bir method da kullanıcı bilgileri başlığını silelim
-        String path = "./src/test/java/resources/data.xlsx";
         FileInputStream fileInputStream = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
         Sheet sheet = workbook.getSheet("Sayfa1");

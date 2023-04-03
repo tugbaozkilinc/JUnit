@@ -50,7 +50,7 @@ public class P05 {
     @After
     public void tearDown() throws Exception {
         String[] arr = driver.findElement(By.cssSelector("div[id='result-stats']")).getText().split(" ");
-        System.out.println(arr[1]);
+        System.out.println("The search result is: " + arr[1]);
     }
 
     @AfterClass

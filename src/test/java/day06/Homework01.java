@@ -31,20 +31,21 @@ public class Homework01 {
     //2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
     //3.Visible Text(Görünen metin) kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
     //4.Tüm dropdown değerleri(value) yazdırın
-    //5. Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True, degilse False yazdırın.
+    //5. Dropdown’un boyutunu bulun, Dropdown’da 3 öğe varsa konsolda True, degilse False yazdırın.
 
     @Test
     public void clickOptions() throws InterruptedException {
         WebElement option1 = driver.findElement(By.xpath("//*[@id='dropdown']"));
         Select option1Dropdown = new Select(option1);
         option1Dropdown.selectByIndex(1);
-        option1Dropdown.selectByVisibleText("Option 1");
         System.out.println(option1Dropdown.getFirstSelectedOption().getText());
         Thread.sleep(3000);
         WebElement option2 = driver.findElement(By.xpath("//*[@id='dropdown']"));
         Select option2Dropdown = new Select(option2);
         option2Dropdown.selectByValue("2");
         System.out.println(option2Dropdown.getFirstSelectedOption().getText());
+        option1Dropdown.selectByVisibleText("Option 1");
+        System.out.println(option1Dropdown.getFirstSelectedOption().getText());
     }
 
     @Test

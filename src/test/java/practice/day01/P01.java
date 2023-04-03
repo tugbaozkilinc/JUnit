@@ -12,9 +12,8 @@ public class P01 {
     public static void main(String[] args) {
 
         //Note: Su an maven projesinde bu testi yapiyoruz. Junit(framework) ile yapmiyoruz. Maven projesi icinde JUnit, Cucumber, TestNG framework leri var.
-        //Kullanim sekilleri farkli. Su an biz framework olmadan maven i en sade haliyle kullaniyoruz. Ama daha once maven i en ilkel
-        //haliyle(System.setProperty ile) kutuphanemizi kendimiz yukleyerek kullaniyorduk. Daha sonra bonigarcia nin WebDriverManager ismindeki kutuphanesini
-        //pom.xml imize ekleyerek o kutuphaneyi otomatik olarak kullanmaya basladik.(Su an bu sekilde kullaniyoruz)
+        //Kullanim sekilleri farkli. Su an biz framework olmadan maven i en sade haliyle kullaniyoruz. Ama daha once maven i en ilkel haliyle kutuphanemizi kendimiz yukleyerek kullaniyorduk.
+        //Daha sonra bonigarcia nin WebDriverManager ismindeki kutuphanesini pom.xml imize ekleyerek o kutuphaneyi otomatik olarak kullanmaya basladik.(Su an bu sekilde kullaniyoruz)
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();

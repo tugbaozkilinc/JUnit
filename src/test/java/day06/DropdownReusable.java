@@ -1,6 +1,7 @@
 package day06;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -43,11 +44,15 @@ public class DropdownReusable {
         Thread.sleep(2000);
         selectFromDropdown(driver.findElement(By.id("state")),"Texas");
         Thread.sleep(2000);
-        List<WebElement> options = driver.findElement(By.id("state")).findElements(By.tagName("option")); //state id'sine sahip olan dropdown'in tum option tag'ine sahip olan elementlerini aldik.
-                                                                                                          //Sectigimiz webElement'in icindeki baska webElement'leri bu sekilde alabiliyoruz.
+        List<WebElement> options = driver.findElement(By.id("state")).findElements(By.tagName("option")); //state id'sine sahip olan dropdown web elementinin tum option tag'ine sahip olan elementlerini
+                                                                                                          //aldik. Sectigimiz webElement'in icindeki baska webElement'leri bu sekilde alabiliyoruz.
         for (WebElement w : options){
             System.out.println(w.getText());
         }
+    }
+
+    @After
+    public void tearDown() {
         driver.close();
     }
 
@@ -57,10 +62,10 @@ public class DropdownReusable {
     //Dropdown elementi locate edilir. 8 locator dan biri kulllanilabilir.
     //Select class i kullanilarak bir Select objesi olusturulur. Select select = new Select(dropdownElement);
     //Select object ini kullanarak uygun methodlarla islem yapilir.
-    //selectBylndex(int);
+    //selectByIndex(int);
     //selectByValue(“String”);
     //selectByVisibleText(“String”);
     //getOptions(); tum dropdown seçeneklerini List<WebElement> olarak return eder.
-    //getFirstSelectedOption(); secili olan ilk secenegi(default) return eder.
+    //getFirstSelectedOption(); secili olan ilk secenegi return eder.
 
 }

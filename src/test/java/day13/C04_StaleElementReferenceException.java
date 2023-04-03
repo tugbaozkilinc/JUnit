@@ -9,7 +9,7 @@ import utilities.TestBase;
 public class C04_StaleElementReferenceException extends TestBase {
 
     /*
-    StateElementReferenceException:
+    StaleElementReferenceException:
     Eski kullanılamaz durumda olan, kullanıma artık elverişli olmayan durumlarda alınan hatadır.
     Sayfayı yenilediğimizde,
     Sayfada ileri geri gittiğimizde meydana gelen exception'dır.
@@ -28,21 +28,10 @@ public class C04_StaleElementReferenceException extends TestBase {
         waitFor(3);
 
         //Tekrar ana sayfaya gel ve LMS login sayfasına tekrar git.
-        driver.navigate().back();
-        waitFor(3);
-        lmsLoginLink.click();
-        //lmsLoginLink linkini sayfayı yeniledikten sonra tekrar kullandığımiz için StaleElementReferenceException aliyoruz.
-    }
-
-    @Test
-    public void staleElementReferenceExceptionTest2() throws Exception {
-        driver.get("https://www.techproeducation.com");
-        WebElement lmsLoginLink = driver.findElement(By.linkText("LMS LOGIN"));
-        lmsLoginLink.click();
-        waitFor(3);
         driver.navigate().refresh();
         waitFor(3);
-        lmsLoginLink.click(); //StaleElementReferenceException hatası alıyoruz.
+        lmsLoginLink.click();
+        //lmsLoginLink linkini sayfayı yeniledikten sonra tekrar kullandığımiz için org.openqa.selenium.StaleElementReferenceException aliyoruz.
         //Çözüm: eski elementi tekrar locate et.
     }
 

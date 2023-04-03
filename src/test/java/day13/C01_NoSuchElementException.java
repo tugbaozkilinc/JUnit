@@ -15,7 +15,7 @@ public class C01_NoSuchElementException extends TestBase {
     What type of waits do you use?
     Which wait do you prefer?
     Why do you prefer that wait?
-    How to you resolve synchronization issue?
+    How do you resolve synchronization issue?
 
     NoSuchElementException***
     TimeOutException***
@@ -34,7 +34,7 @@ public class C01_NoSuchElementException extends TestBase {
     @Test
     public void noSuchElementTest() throws Exception {
         driver.get("https://www.techproeducation.com");
-        driver.findElement(By.xpath("//input[@type='search']")).sendKeys("QA", Keys.ENTER);
+        driver.findElement(By.xpath("wrong locator")).sendKeys("QA", Keys.ENTER);
         //Yanlış locator aldığımız için org.openqa.selenium.NoSuchElementException hatası ile karşılaştik.
     }
 

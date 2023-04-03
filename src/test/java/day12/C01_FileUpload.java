@@ -17,7 +17,7 @@ public class C01_FileUpload extends TestBase {
         WebElement chooseFileButton = driver.findElement(By.id("file-upload"));
 
         //Yuklemek istediginiz dosyayi secelim.
-        String path = "C:\\Users\\tugba\\Desktop\\logo.jpeg";
+        String path = System.getProperty("user.home") + "\\Desktop\\logo.jpeg";
         chooseFileButton.sendKeys(path);
         waitFor(5);
 

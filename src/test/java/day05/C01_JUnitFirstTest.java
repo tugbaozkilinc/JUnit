@@ -34,6 +34,7 @@ public class C01_JUnitFirstTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://techproeducation.com");
+        driver.close();
     }
 
 }

@@ -1,10 +1,7 @@
 package day05;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,9 +14,9 @@ public class C07_Assertion {
     //Note: Test icin uygun bir sekilde hazirlanmis bir  framework’da expected degerlerin actual degerlere esit olup olmadigina if-else statement ile bakilmaz.
     //ONEMLI OLAN kiyaslama sonucunun true veya false olmasi degil, bekledigimiz sonucun olup olmamasidir. Assertion başarısız olursa AssertionException ile hata mesajı verilir.
 
-    WebDriver driver;
-    @Before
-    public void setUp() {
+    static WebDriver driver;
+    @BeforeClass
+    public static void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -27,8 +24,8 @@ public class C07_Assertion {
         driver.get("https://www.amazon.com");
     }
 
-    @After
-    public void tearDown() throws InterruptedException {
+    @AfterClass
+    public static void tearDown() throws InterruptedException {
         Thread.sleep(3000);
         driver.close();
     }
