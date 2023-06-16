@@ -26,8 +26,9 @@ public class P02_Cookie extends TestBase {
         driver.manage().addCookie(cookie);
 
         //Yeni cookie eklendikten sonra cookie sayısını ve isimlerini yazdırınız
-        System.out.println("Cookies size is: " + driver.manage().getCookies().size());
-        driver.manage().getCookies().forEach(t -> System.out.println(t.getName() + ": " + t.getValue()));
+        Set<Cookie> newCookies = driver.manage().getCookies();
+        System.out.println("Cookies size is: " + newCookies.size());
+        newCookies.forEach(t -> System.out.println(t.getName() + ": " + t.getValue()));
 
         //Oluşturduğumuz cookie'i silelim
         driver.manage().deleteCookieNamed("white"); //driver.manage().deleteCookie(cookie);

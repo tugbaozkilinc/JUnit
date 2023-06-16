@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class C02_ExplicitWait extends TestBase {
 
-    //Note: Bir sayfanın uygulama sunucusu veya web sunucusu çok yavaşsa veya internet ağı çok yavaşsa, web sayfasındaki öğe(webelement) çok yavaş yüklenir.
+    //Note: Bir sayfanın uygulama sunucusu veya web sunucusu çok yavaşsa veya internet ağı çok yavaşsa, web sayfasındaki öğe(web element) çok yavaş yüklenir.
     //Bu durumda, komut dosyanız(test script) öğeyi bulmaya çalıştığında, öğeler yüklenmez. Bu yüzden test komut dosyası(test script) öğeyi bulamaz ve başarısız
     //olur ve NoSuchElement Exception alırız. Driver ile cihaz veya internet arasinda yasanan senkronizasyon sorunlarini çözmek icin sürücümüzü(driver) belli sartlar
     //ile bekletmemiz(wait) gerekir.

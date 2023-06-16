@@ -1,6 +1,5 @@
 package practice.day06;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;

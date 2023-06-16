@@ -23,7 +23,7 @@ public class C01_ExcelRead {
         Workbook workbook = WorkbookFactory.create(fileInputStream);
 
         //Sayfayi/Sheet1 ac
-        Sheet sheet = workbook.getSheet("Sheet1"); //Sheet sheet1 = workbook.getSheetAt(0); -> index sayisinin degisme olasiligi oldugu icin tavsiye edilmez.
+        Sheet sheet = workbook.getSheet("Sheet1"); //Sheet sheet = workbook.getSheetAt(0); -> index sayisinin degisme olasiligi oldugu icin tavsiye edilmez.
 
         //Ilk row a git
         Row row1 = sheet.getRow(0);
@@ -55,7 +55,7 @@ public class C01_ExcelRead {
         //COUNTRY, CAPITALS key ve value lari map e alip print et
         //{Greece=Athens, Canada=Ottowa...}
         Map<String, String> capitals = new HashMap<>();
-        for (int i = 1; i<sheet.getLastRowNum()+1; i++){ //sheet1.getPhysicalNumberOfRows()
+        for (int i = 1; i<sheet.getLastRowNum()+1; i++){ //sheet.getPhysicalNumberOfRows()
             String country = sheet.getRow(i).getCell(0).toString();
             String capital = sheet.getRow(i).getCell(1).toString();
             capitals.put(country, capital);

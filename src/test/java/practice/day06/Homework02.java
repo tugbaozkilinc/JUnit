@@ -1,6 +1,5 @@
 package practice.day06;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,7 +20,7 @@ public class Homework02 extends TestBase {
         Actions actions = new Actions(driver);
         actions.dragAndDropBy(greenKey,-175,0); //Genellikle slider' lar için bu method kullanılır
         actions.dragAndDropBy(blueKey,-80,0);
-        actions.dragAndDropBy(greenKey,301,0).release().build().perform();
+        actions.dragAndDropBy(greenKey,301,0).build().perform();
 
         //Sarı olduğunu test edelim
         WebElement yellow = driver.findElement(By.xpath("//*[@style='background-color: rgb(255, 255, 0);']"));

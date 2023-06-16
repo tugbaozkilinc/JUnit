@@ -1,6 +1,5 @@
 package day11;
 
-import com.github.javafaker.File;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;

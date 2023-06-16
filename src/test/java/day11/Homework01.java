@@ -20,8 +20,8 @@ public class Homework01 extends TestBase {
         waitFor(3);
 
         //Dosyanın başarıyla indirilip indirilmediğini test edelim
-        String path = System.getProperty("user.home") + "\\Downloads\\LambdaTest.txt";
-        Assert.assertTrue(Files.exists(Paths.get(path)));
+        String filePath = System.getProperty("user.home") + "\\Downloads\\LambdaTest.txt";
+        Assert.assertTrue(Files.exists(Paths.get(filePath)));
     }
 
 }

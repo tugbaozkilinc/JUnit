@@ -15,7 +15,7 @@ import java.time.Duration;
 public class Homework04 {
 
     //Given kullanici "https://editor.datatables.net/" sayfasina gider
-    //Then new butonuna basar
+    //When new butonuna basar
     //And editor firstname kutusuna "<firstName>" bilgileri girer
     //And editor lastname kutusuna "<lastName>" bilgileri girer
     //And editor position kutusuna "<position>" bilgileri girer
@@ -23,7 +23,7 @@ public class Homework04 {
     //And editor extension kutusuna "<extension>" bilgileri girer
     //And editor startdate kutusuna "<startDate>" bilgileri girer
     //And editor salary kutusuna "<salary>" bilgileri girer
-    //When Create tusuna basar
+    //And Create tusuna basar
 
     WebDriver driver;
     @Before

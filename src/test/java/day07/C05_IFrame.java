@@ -15,7 +15,7 @@ public class C05_IFrame extends TestBase {
     //driver.switchTo().frame("id or name value of the iframe");
     //driver.switchTo().frame(WebElement of the iframe);
     //Iframe’den cikmak icin 2 komut vardir;
-    //driver.switchTo().parentFrame();	Bir ust seviyedeki iframe’e cikartir
+    //driver.switchTo().parentFrame(); Bir ust seviyedeki iframe’e cikartir
     //driver.switchTo().defaultContent();  En ustteki iframe’e cikmak icin kullanilir.
 
     @Test

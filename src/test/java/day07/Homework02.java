@@ -25,7 +25,7 @@ public class Homework02 extends TestBase {
         driver.findElement(By.xpath("//*[.='Alert with OK & Cancel ']")).click();
         driver.findElement(By.xpath("//*[@onclick='confirmbox()']")).click();
 
-        //cancel Alert  (Press a Button !)
+        //cancel Alert(Press a Button !)
         driver.switchTo().alert().dismiss();
 
         //click "Alert with Textbox" and click 'click the button to demonstrate the prompt box'

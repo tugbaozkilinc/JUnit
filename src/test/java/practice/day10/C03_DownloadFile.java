@@ -20,12 +20,12 @@ public class C03_DownloadFile extends TestBase {
         String firstWindowHandle = driver.getWindowHandle();
 
         //Platforms Supported by Selenium altındaki Browsers bölümü görünene kadar sayfayı indirelim
-        WebElement browser = driver.findElement(By.xpath("(//button[@class='btn btn-dark btn-lg btn-block rounded-0 text-left'])[1]"));
+        WebElement browsers = driver.findElement(By.xpath("(//button[@class='btn btn-dark btn-lg btn-block rounded-0 text-left'])[1]"));
         Actions actions = new Actions(driver);
-        actions.moveToElement(browser).perform();
+        actions.moveToElement(browsers).perform();
 
         //Browser bölümünden Chrome driver bölümündeki documentation linkine tıklıyalım
-        browser.click();
+        browsers.click();
         waitFor(2);
         WebElement chrome = driver.findElement(By.xpath("(//*[text()='documentation'])[5]"));
         chrome.click();

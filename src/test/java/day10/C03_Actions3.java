@@ -14,17 +14,12 @@ public class C03_Actions3 extends TestBase {
 
         //Sayfanin altına doğru gidelim
         Actions actions = new Actions(driver);
-        waitFor(3);
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
-        waitFor(3);
         actions.sendKeys(Keys.ARROW_DOWN).perform(); //PAGE_DOWN dan daha az mesafe kat eder.
-        waitFor(3);
 
         //Sonra sayfanın üstüne doğru gidelim
         actions.sendKeys(Keys.PAGE_UP).perform();
-        waitFor(3);
         actions.sendKeys(Keys.ARROW_UP).perform();
-        waitFor(3);
         actions.sendKeys(Keys.ARROW_RIGHT).perform();
         actions.sendKeys(Keys.ARROW_LEFT).perform();
     }

@@ -12,14 +12,15 @@ import java.util.Date;
 
 public class C03_ExtentReports extends TestBase {
 
-    protected static ExtentReports extentReports;
-    protected static ExtentHtmlReporter extentHtmlReporter;
-    protected static ExtentTest extentTest;
+    ExtentReports extentReports;
+    ExtentHtmlReporter extentHtmlReporter;
+    ExtentTest extentTest;
     @Test
     public void extentReportsTest() {
         //Extent Reports?
+        //<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports --> ilgili dependency yuklenir.
         //Otomasyon raporlari almak icin kullanilir.
-        //Extent report bir API dir. Extent reports selenium un disinda da kullanilabilir. Bu API dan gelen method lar yardimiyla rapor sablonu olusturulabilir.
+        //Extent report bir API dir. Extent reports Selenium un disinda da kullanilabilir. Bu API dan gelen method lar yardimiyla rapor sablonu olusturulabilir.
         //3 class kullaniriz: ExtentReports: sablonu olusturur, ExtentHtmlReporter: sablonu projeye ekler, ExtentTest: raporlama islemini yapar
         //Extent Reports :
         //HTML raporlama aracıdır. Bize Html raporlarını verir. Test adımlarını kaydetmemize yardımcı olur. Ayrıca ekran görüntülerini ekleyebiliriz.

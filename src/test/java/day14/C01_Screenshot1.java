@@ -17,7 +17,7 @@ import java.util.Date;
 public class C01_Screenshot1 extends TestBase {
 
     //Selenium tum ekran goruntusu nasil alinir?
-    //-tum ekran goruntusu seleniumdan gelen getScreenshotAs method u ile alinir.
+    //-ekran goruntusu seleniumdan gelen getScreenshotAs method u ile alinir.
     //-getScreenshotAs method u selenium daki TakesScreenshot api indan gelir.
     //2 farkli sekilde ekran goruntusu alinabilir; tum sayfa, ozel element
     //Olusturmus oldugum reusable method yardımıyla ister tum sayfanin ister belirli bir elementin ekran goruntusunu kolaylikla alabilirim.

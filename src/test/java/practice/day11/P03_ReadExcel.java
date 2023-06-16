@@ -22,9 +22,7 @@ public class P03_ReadExcel extends TestBase {
         Workbook workbook = WorkbookFactory.create(fileInputStream);
         Sheet sheet = workbook.getSheet("Sayfa1");
         String email = sheet.getRow(1).getCell(1).toString();
-        System.out.println(email);
         String password = sheet.getRow(2).getCell(1).toString();
-        System.out.println(password);
 
         //https://www.bluerentalcars.com/ adresine gidip
         driver.get("https://www.bluerentalcars.com/");

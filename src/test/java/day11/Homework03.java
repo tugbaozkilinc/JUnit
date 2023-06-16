@@ -57,7 +57,7 @@ public class Homework03 extends TestBase {
         //dropdown’dan bebek bölümüne secin
         searchBoxDropdown.selectByVisibleText("Baby");
 
-        //bebek puset aratıp bulundan sonuç sayısını yazdırın
+        //bebek puset aratıp bulunan sonuç sayısını yazdırın
         searchBox.sendKeys(Keys.TAB, "bebek puset", Keys.ENTER);
 
         //sonuç yazsının puset içerdiğini test edin

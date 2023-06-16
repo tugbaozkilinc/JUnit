@@ -34,7 +34,7 @@ public class P01 {
         //-Ardindan "trendyol.com" adresine gidelim
         driver.get("https://trendyol.com");
 
-        //-bu adresin basligini alalim ve "Sitesi" kelismesini icerip icermedigini kontrol edelim
+        //-bu adresin basligini alalim ve "Sitesi" kelimesini icerip icermedigini kontrol edelim
         String trendyolTitle = driver.getTitle();
         Assert.assertTrue(trendyolTitle.contains("Sitesi"));
 

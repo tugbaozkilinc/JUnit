@@ -15,6 +15,8 @@ public class C02_AlertsAccept extends TestBase {
     //Confirmation Alert(Click for JS Confirm): Bu onay uyarısı bir tür işlem yapma izni ister. Alert onaylaniyorsa OK, onaylanmiyorsa Cancel butonuna basilir.
     //Prompt Alert(Click for JS Prompt): Bu Prompt Uyarısı kullanıcıdan bazı girdilerin girilmesini ister ve selenium webdriver metni sendkeys ("input….") kullanarak girilebilir.
 
+    //Alertleri nasil automate edersin? How to handle alerts in selenium? -Alert ler javascript ile olusur. Inspect edilemezler. Oncelikle alert e switch etmemiz gerekir.
+
     @Test
     public void name() throws InterruptedException {
         //https://testcenter.techproeducation.com/index.php?page=javascript-alerts  adresine gidin.
@@ -33,7 +35,5 @@ public class C02_AlertsAccept extends TestBase {
         String expectedResult = "You successfully clicked an alert";
         Assert.assertEquals(expectedResult, actualResult);
     }
-
-    //Alertleri nasil automate edersin? How to handle alerts in selenium? -Alert ler javascript ile olusur. Inspect edilemezler. Oncelikle alert e switch etmemiz gerekir.
 
 }

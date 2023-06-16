@@ -26,7 +26,7 @@ public class Homework01 extends TestBase {
                 counter++;
             }
         }
-        Assert.assertEquals(list.size(), counter);
+        Assert.assertEquals(counter, list.size());
     }
 
 }

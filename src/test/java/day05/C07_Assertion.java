@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class C07_Assertion {
 
-    //Note: Test icin uygun bir sekilde hazirlanmis bir  framework’da expected degerlerin actual degerlere esit olup olmadigina if-else statement ile bakilmaz.
+    //Note: Test icin uygun bir sekilde hazirlanmis bir framework’da expected degerlerin actual degerlere esit olup olmadigina if-else statement ile bakilmaz.
     //ONEMLI OLAN kiyaslama sonucunun true veya false olmasi degil, bekledigimiz sonucun olup olmamasidir. Assertion başarısız olursa AssertionException ile hata mesajı verilir.
 
     static WebDriver driver;

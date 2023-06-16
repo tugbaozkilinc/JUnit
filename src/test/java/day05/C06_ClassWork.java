@@ -35,7 +35,7 @@ public class C06_ClassWork {
 
         //“Create an Account” button’una basin
         driver.findElement(By.xpath("(//*[@role='button'])[2]")).click(); //Bu butonu incele yapamiyoruz, boyle durumlarda yanina gelip incele diyoruz, sol ust kosedeki ok
-                                                                                       //tusuna basiyoruz(mouse u nereye goturursen o web elementi isaretler)ve butona tikliyoruz.
+                                                                                        //tusuna basiyoruz(mouse u nereye goturursen o web elementi isaretler) ve butona tikliyoruz.
         //“radio buttons” elementlerini locate edin
         WebElement female = driver.findElement(By.xpath("//input[@value='1']")); //Bazen tag name farketmeksizin yapinca 1/1 eslesme vermeyebiliyor.
         WebElement male = driver.findElement(By.xpath("//input[@value='2']"));

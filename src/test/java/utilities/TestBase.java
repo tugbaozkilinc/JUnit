@@ -22,7 +22,7 @@ public class TestBase {
 
     protected static WebDriver driver;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -30,7 +30,7 @@ public class TestBase {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         waitFor(5);
         driver.quit();
     }

@@ -18,7 +18,8 @@ public class Homework02 extends TestBase {
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
 
         //Textbox’in etkin olmadigini(enabled) dogrulayın
-        Assert.assertFalse(driver.findElement(By.xpath("//*[@type='text']")).isEnabled());
+        WebElement textBox = driver.findElement(By.xpath("//*[@type='text']"));
+        Assert.assertFalse(textBox.isEnabled());
 
         //Enable butonuna tıklayın ve text box etkin oluncaya kadar bekleyin
         driver.findElement(By.xpath("//*[text()='Enable']")).click();
@@ -29,7 +30,7 @@ public class Homework02 extends TestBase {
         Assert.assertTrue(element.isDisplayed());
 
         //Textbox’in etkin oldugunu(enabled) dogrulayın.
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@type='text']")).isEnabled());
+        Assert.assertTrue(textBox.isEnabled());
     }
 
 }

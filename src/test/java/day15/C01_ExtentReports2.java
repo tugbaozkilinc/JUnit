@@ -12,9 +12,9 @@ import java.util.Date;
 
 public class C01_ExtentReports2 {
 
-    protected static ExtentReports extentReports;
-    protected static ExtentHtmlReporter extentHtmlReporter;
-    protected static ExtentTest extentTest;
+    static ExtentReports extentReports;
+    static ExtentHtmlReporter extentHtmlReporter;
+    static ExtentTest extentTest;
     @BeforeClass
     public static void beforeClass() throws Exception {
         //REPORT PATH

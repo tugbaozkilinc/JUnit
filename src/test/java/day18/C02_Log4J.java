@@ -18,18 +18,20 @@ public class C02_Log4J {
     //logger.info("Info logger");
     //logger.debug("Debug logger");
     //Seviyeleri su sekilde: fatal> error> warn> info> debug> trace
-    //1. dependency ekle (apache.logging.log4j)
+    //1. dependency ekle
+    //<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+    //<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
     //2. Logger object olustur: private static Logger logger = LogManager.getLogger(Demo.class.getName());
-    //3. Logger fonksiyonuyla istenilen fonksiyonu kullan: logger.debug("Debug logger");
+    //3. Object ile istenilen fonksiyonu kullan: logger.debug("Debug logger");
     //4. Consol daki loglari kontrol edelim. Default olarak fatal ya da error gorunmus olacaktir.
 
     //Log4j Nedir?
     //Loglama yani yazdırma islemi yapmak icin kullanılan bir API dir.
     //Cesitli seviyelerde loglama islemi yapılabilir: uyarı, bilgi, debug, hata mesajları icin kullanilabilir
-    //Javadaki System.out.println e benzer, ama log4j ile dosyaya detaylı sekilde yazdırma islemi yapabilir.
+    //Javadaki System.out.println e benzer, ama log4j ile dosyaya detaylı sekilde yazdırma islemi yapilabilir.
     //Su anda projemde log4j2 kullanmaktayım.
 
-    private static Logger logger = LogManager.getLogger(C02_Log4J.class.getName());
+    Logger logger = LogManager.getLogger(C02_Log4J.class.getName());
 
     @Test
     public void log4JTest(){

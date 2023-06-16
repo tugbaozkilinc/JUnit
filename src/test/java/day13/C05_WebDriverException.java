@@ -14,7 +14,7 @@ public class C05_WebDriverException extends TestBase {
     */
 
     //Seleniumda aldigin 5 exception?
-    //NullPointerException, no such elementException, time outException, staleElementReferenceException, WebDriverException
+    //NullPointerException, NoSuchElementException, TimeOutException, StaleElementReferenceException, WebDriverException
     //Genel olarak exception aldiginda cozum yolun nedir?
     //Hata mesajini oku
     //Genel olarak zamanlama, yanlis locator, iframe hataları olabiliyor

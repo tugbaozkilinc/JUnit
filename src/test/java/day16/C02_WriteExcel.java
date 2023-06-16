@@ -49,4 +49,7 @@ public class C02_WriteExcel {
     //excelden çekiyorum ve test caselerimde kullanıyorum.
     //Datalari excelde tutmanın faydası, dataların derli toplu bir yerde olması, data güvenliği, data kayıplarına engel olmak.
 
+    //Apache POI kütüphanesini projenize eklemek, Java programınızda Excel(Microsoft Documents) dosyalarıyla çalışmanızı sağlar. Örneğin, bir Excel dosyasını okuyabilir,
+    //hücrelere erişebilir, değerlerini değiştirebilir, yeni hücreler ekleyebilir ve Excel dosyasını kaydedebilirsiniz.
+
 }

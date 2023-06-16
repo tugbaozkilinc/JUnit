@@ -36,7 +36,7 @@ public class C01_MavenIlkTest {
 
         //4. Bulunan sonuc sayisini yazdiralim
         WebElement searchResult = driver.findElement(By.xpath("(//*[@class='sg-col-inner'])[1]")); //(//*[@class='sg-col-inner'])[1] bu şekilde multiple arama sonucundan ilkini list
-                                                                                                                //olusturmadan alabiliriz. index le arama yapma css selector da yok xpath de var.
+                                                                                                                 //olusturmadan alabiliriz. index le arama yapabilme css selector da yok xpath de var.
         System.out.println(searchResult.getText());
 
         //5. Ilk urunu tiklayalim

@@ -19,7 +19,7 @@ public abstract class TestBasePractice {
     //2- Eğer extentReport almak istersek ilk yapmamız gereken ExtentReports class'ından bir obje oluşturmak
     //3- HTML formatında düzenleneceği için ExtentHtmlReporter class'ından obje oluşturmak
 
-    protected static WebDriver driver;
+    protected WebDriver driver;
     protected ExtentReports extentReports; //Raporlamayı başlatırız
     protected ExtentHtmlReporter extentHtmlReporter; //Raporumu HTML formatında düzenler
     protected ExtentTest extentTest; //Test asamalarina extentTest objesi ile bilgi ekleriz

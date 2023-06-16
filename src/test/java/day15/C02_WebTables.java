@@ -1,6 +1,5 @@
 package day15;
 
-import day18.C02_Log4J;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
@@ -15,7 +14,7 @@ public class C02_WebTables extends TestBase {
     //Bir Web sayfasindaki web elementleri duzenlemek icin HTML tablo oluşturabiliriz
     //HTML tablo farkli sekillerde olusturulabilir ama genellikle <table>, <thead>, <tbody>, <tr>(satir), <th>(basliktaki hucre) ve <td>(body deki hucre) tag’leri kullanilir.
 
-    private static Logger logger = LogManager.getLogger(C02_WebTables.class.getName());
+    Logger logger = LogManager.getLogger(C02_WebTables.class.getName());
     @Test
     public void table1Print() {
         // //table[@id='table1']//thead//tr , //table[@id='table1']//thead  basligi(ilk satiri) verir

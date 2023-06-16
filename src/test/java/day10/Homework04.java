@@ -38,7 +38,7 @@ public class Homework04 extends TestBase {
 
         //8. "Double click me" butonunu cift tiklayin
         WebElement doubleClickButton = driver.findElement(By.xpath("//*[@id='double-click']"));
-        String previousColor = doubleClickButton.getCssValue("background-color");
+        String previousColor = doubleClickButton.getCssValue("background-color"); //background-color --> bir stil ozelligidir
         actions.doubleClick(doubleClickButton).perform();
 
         //9. "Double click me" butonunun renk değiştirdiğini doğrulayın

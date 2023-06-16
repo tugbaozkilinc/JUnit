@@ -28,7 +28,7 @@ public class P02_WebTables extends TestBase {
             }
             row++;
         }
-        driver.findElements(By.xpath("//table[@border='1']//tbody//tr")).stream().filter(t -> t.getText().contains("601m")).forEach(t -> System.out.println(t.getText()));
+        list.stream().filter(t -> t.getText().contains("601m")).forEach(t -> System.out.println(t.getText()));
 
         //4. Bütün Height bilgilerini yazdırınız
         List<WebElement> heightList = driver.findElements(By.xpath("//table[@class='tsc_table_s13']//tbody//tr//td[3]"));
@@ -43,7 +43,7 @@ public class P02_WebTables extends TestBase {
         for (String w : textList) {
             sum += Integer.parseInt(w.replace("m", ""));
         }
-        System.out.println(sum);
+        System.out.println("Sum is: " + sum);
 
         //6. Bir method ile satır ve sutun bilgilerini çağıralım
         findTableMethod(3, 3);
@@ -52,6 +52,7 @@ public class P02_WebTables extends TestBase {
     public void findTableMethod(int row, int column){
         List<WebElement> list = driver.findElements(By.xpath("//table[@border='1']//tbody//tr[" + row + "]//td[" + column + "]"));
         list.forEach(t -> System.out.println(t.getText()));
+        //System.out.println(list.get(0).getText());
     }
 
 }

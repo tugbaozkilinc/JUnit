@@ -7,7 +7,7 @@ public class C06_EkranGoruntusuAlmaDersNotlari {
      1) Tester olarak ekran görüntüsü neden alınır?
      Çünkü dökümantasyon için, Yani testcase geçmiş ise geçtiğini kayda geçirmek için, testcase kalmış ise kaldığını/bug bulunduğunu kayda geçirmek için.
      MANUEL TEST
-     Techproeducation sayfasına git, LMS login linkinin sayfada olduğunu test et
+     -Techproeducation sayfasına git, LMS login linkinin sayfada olduğunu test et
      Windows'da: Windows + Shift + S ile ekran görüntüsü alırız.
      TEST EXECUTION DOCUMANTASYONU
      1. Adım: ana sayfaya git ve LMS login elementini test et
