@@ -1,6 +1,5 @@
 package utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -8,7 +7,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -18,12 +16,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class TestBase {
+public abstract class TestBase {
 
     protected static WebDriver driver;
     @Before
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -53,7 +50,7 @@ public class TestBase {
 
     public static void waitFor(int seconds){
         try {
-            Thread.sleep(seconds*1000L);
+            Thread.sleep(seconds* 1000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -145,7 +142,7 @@ public class TestBase {
     }
 
     public static WebElement fluentWait(String xpath, int withTimeout, int pollingEvery) {
-        FluentWait<WebDriver> wait = new FluentWait<>(driver) //Wait<WebDriver> wait = new FluentWait<>(driver)
+        FluentWait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(withTimeout))
                 .pollingEvery(Duration.ofSeconds(pollingEvery))
                 .withMessage("Ignoring No Such Element Exception")

@@ -4,7 +4,6 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import utilities.TestBase;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

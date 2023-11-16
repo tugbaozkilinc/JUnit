@@ -1,13 +1,12 @@
 package day05;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
+import static org.junit.Assert.assertTrue;
 
 public class C07_Assertion {
 
@@ -17,7 +16,6 @@ public class C07_Assertion {
     static WebDriver driver;
     @BeforeClass
     public static void setUp() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -41,19 +39,19 @@ public class C07_Assertion {
     public void test01() {
         String actualTitle = driver.getTitle();
         String expectedTitle = "Amazon";
-        Assert.assertTrue(actualTitle.contains(expectedTitle));
+        assertTrue(actualTitle.contains(expectedTitle));
     }
 
     @Test
     public void test02() {
         WebElement element = driver.findElement(By.xpath("//*[@id='nav-logo-sprites']"));
-        Assert.assertTrue(element.isDisplayed()); //Bunu if else ile yapsan ve consolda failed yazisini gorsen bile testin passed olur, Bunun icin if else kullanmiyoruz.
+        assertTrue(element.isDisplayed()); //Bunu if else ile yapsan ve consolda failed yazisini gorsen bile testin passed olur, Bunun icin if else kullanmiyoruz.
     }
 
     @Test
     public void test03(){
         WebElement element = driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']"));
-        Assert.assertTrue(element.isEnabled());
+        assertTrue(element.isEnabled());
     }
 
     @Test

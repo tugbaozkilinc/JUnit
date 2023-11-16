@@ -8,9 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
-
 import java.util.List;
-
 import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 public class Homework03 extends TestBase {

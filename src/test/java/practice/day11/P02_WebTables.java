@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,9 +49,8 @@ public class P02_WebTables extends TestBase {
     }
 
     public void findTableMethod(int row, int column){
-        List<WebElement> list = driver.findElements(By.xpath("//table[@border='1']//tbody//tr[" + row + "]//td[" + column + "]"));
-        list.forEach(t -> System.out.println(t.getText()));
-        //System.out.println(list.get(0).getText());
+        WebElement value = driver.findElement(By.xpath("//table[@border='1']//tbody//tr[" + row + "]//td[" + column + "]"));
+        System.out.println(value.getText());
     }
 
 }

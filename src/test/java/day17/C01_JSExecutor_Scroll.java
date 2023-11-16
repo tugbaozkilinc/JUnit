@@ -8,14 +8,14 @@ import utilities.TestBase;
 
 public class C01_JSExecutor_Scroll extends TestBase {
 
-    //-Javascript Executor nedir?
+    //-JavascriptExecutor nedir?
     //Seleniumdan gelen ve javascript kodlarını calistirmaya yarayan bir interface dir. Normal selenium method ları yeterli olmadıgı durumlarda kullanilabilir.
     //-Ne zaman ve nasıl kullandın?
     //Normal selenium method ları yeterli olmadıgı durumlarda kullanilabilir. Ornegin, bazı buttonlara tıklama da problem olabiliyor, ya da belirli bir web elementin gorunur olacağı
     //sekilde sayfanın kaydırma islemi, ya da input kutularindaki değerleri almak icin kullanilabilir.
     //-Sayfayi asagi veya yukarı kaydırma islemi seleniumda nasıl yapılır?
     //Seleniumdaki Actions yada javascript executor method ları ile kaydırma islemleri yapılabilir. Ornegin, actions larda page_up, page_down, arrow_up, arrow_down method lari ile ya da
-    //js executor daki scrollintoview(true) ile yapılabilir. Ben olusturdugumuz reusable method larını kullanarak bu islemleri kolaylıkla yapabiliyorum
+    //js executor daki arguments[0].scrollIntoView(true); ile yapılabilir. Ben olusturdugumuz reusable method larını kullanarak bu islemleri kolaylıkla yapabiliyorum
     //-Bir kutucukdaki(input) elemanın metni nasıl alınabilir?
     //Javascript executor ile alabiliriz. Cunku js executor ile attribute degerlerini alma imkanımız var. getText() METHOD U BU DURUMLARDA CALISMAZ.
     //-Selenium da click yaparken problem yasadigin oldu mu?

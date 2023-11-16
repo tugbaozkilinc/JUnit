@@ -18,7 +18,7 @@ public class C04_StaleElementReferenceException extends TestBase {
     */
 
     @Test
-    public void staleElementReferenceExceptionTest() throws Exception {
+    public void staleElementReferenceExceptionTest() {
         //LMS login linkine tıkla ve o sayfanın URL'inin lms içerdiğini test et
         driver.get("https://www.techproeducation.com");
         WebElement lmsLoginLink = driver.findElement(By.linkText("LMS LOGIN"));

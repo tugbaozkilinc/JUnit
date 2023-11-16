@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

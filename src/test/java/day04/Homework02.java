@@ -1,18 +1,15 @@
 package day04;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class Homework02 {
 
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -43,7 +40,8 @@ public class Homework02 {
 
         //8. Sectiginiz urunun basarili olarak sepete eklendigini control edin
         String productBought = driver.findElement(By.xpath("//*[text()='Sauce Labs Backpack']")).getText();
-        System.out.println(productBought.equals(productName) ? "The process of buying PASSED" : "The process of buying FAILED");
+        String result = productBought.equals(productName) ? "The process of buying PASSED" : "The process of buying FAILED";
+        System.out.println(result);
 
         //9. Sayfayi kapatin
         driver.close();

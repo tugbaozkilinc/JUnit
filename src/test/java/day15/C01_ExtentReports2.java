@@ -6,24 +6,24 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
+import utilities.TestBase;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class C01_ExtentReports2 {
+public class C01_ExtentReports2 extends TestBase {
 
     static ExtentReports extentReports;
     static ExtentHtmlReporter extentHtmlReporter;
     static ExtentTest extentTest;
     @BeforeClass
-    public static void beforeClass() throws Exception {
+    public static void beforeClass() {
         //REPORT PATH
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir") + "/test-output/reports/" + currentTime + "html_report.html";
-        //Creating HTML report in the path
-        extentHtmlReporter = new ExtentHtmlReporter(path);
         //Creating extent reports object for generating the Entire reports with configuration
         extentReports = new ExtentReports();
+        //Creating HTML report in the path
+        extentHtmlReporter = new ExtentHtmlReporter(path);
 
         //***************RAPORU CUSTOMIZE EDEBILIRIZ***********************************************
         extentReports.setSystemInfo("Test Environment", "Regression");
@@ -57,7 +57,7 @@ public class C01_ExtentReports2 {
     }
 
     @AfterClass
-    public static void afterClass() throws Exception {
+    public static void afterClass() {
         extentReports.flush();
     }
 

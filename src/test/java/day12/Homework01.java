@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.TestBase;
-
 import java.time.Duration;
 
 public class Homework01 extends TestBase {
@@ -57,7 +56,7 @@ public class Homework01 extends TestBase {
         driver.findElement(By.xpath("//*[.='Remove']")).click();
 
         //“It’s gone!” mesajinin goruntulendigini dogrulayin.
-        Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).pollingEvery(Duration.ofSeconds(3)).withMessage("Ignore Exception").ignoring(NoSuchMethodException.class);
+        Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).pollingEvery(Duration.ofSeconds(3));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='message']")));
         Assert.assertTrue(element.isDisplayed());
 

@@ -1,10 +1,8 @@
 package practice.day01;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class P01 {
@@ -15,7 +13,6 @@ public class P01 {
         //Kullanim sekilleri farkli. Su an biz framework olmadan maven i en sade haliyle kullaniyoruz. Ama daha once maven i en ilkel haliyle kutuphanemizi kendimiz yukleyerek kullaniyorduk.
         //Daha sonra bonigarcia nin WebDriverManager ismindeki kutuphanesini pom.xml imize ekleyerek o kutuphaneyi otomatik olarak kullanmaya basladik.(Su an bu sekilde kullaniyoruz)
 
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

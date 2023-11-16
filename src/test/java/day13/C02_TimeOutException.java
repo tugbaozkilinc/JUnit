@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.TestBase;
-
 import java.time.Duration;
 
 public class C02_TimeOutException extends TestBase {
@@ -26,7 +25,7 @@ public class C02_TimeOutException extends TestBase {
     */
 
     @Test
-    public void timeOutExceptionTest() throws Exception {
+    public void timeOutExceptionTest() {
         driver.get("https://www.techproeducation.com");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Yanlıs ID")));

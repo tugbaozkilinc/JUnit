@@ -1,8 +1,6 @@
 package day06;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -10,16 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
 import java.time.Duration;
 import java.util.List;
+import static org.junit.Assert.assertEquals;
 
 public class C01_Dropdown {
 
     WebDriver driver;
     @Before
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -59,7 +56,7 @@ public class C01_Dropdown {
         WebElement state = driver.findElement(By.xpath("//*[@id='state']"));
         Select stateDropdown = new Select(state);
         String defaultText = stateDropdown.getFirstSelectedOption().getText();
-        Assert.assertEquals("Select a State", defaultText);
+        assertEquals("Select a State", defaultText);
     }
 
     @After

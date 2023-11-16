@@ -3,7 +3,6 @@ package day07;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import utilities.TestBase;
 
 public class Homework02 extends TestBase {

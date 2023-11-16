@@ -1,6 +1,5 @@
 package practice.day02;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -9,15 +8,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class P04 {
 
     static WebDriver driver;
     @BeforeClass
-    public static void beforeClass() throws Exception {
-        WebDriverManager.chromedriver().setup();
+    public static void beforeClass() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -41,13 +38,13 @@ public class P04 {
         System.out.println("Result is: " + result[1]);
 
         //sonuc sayisinin 10 milyon’dan fazla oldugunu test edin
-        int actualResult = Integer.parseInt(result[1].replaceAll("\\.", ""));
+        String newResult = result[1].replaceAll("\\.", "");
+        int actualResult = Integer.parseInt(newResult);
         Assert.assertTrue(actualResult>10000000);
     }
 
     @AfterClass
-    public static void afterClass() throws Exception {
-        //Sayfayi kapatin
+    public static void afterClass() {
         driver.close();
     }
 

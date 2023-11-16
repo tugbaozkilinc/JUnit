@@ -6,7 +6,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -29,10 +28,10 @@ public class C03_ExtentReports extends TestBase {
         //REPORT PATH
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir") + "/test-output/reports/" + currentTime + "html_report.html";
-        //Creating HTML report in the path
-        extentHtmlReporter = new ExtentHtmlReporter(path);
         //Creating extent reports object for generating the Entire reports with configuration
         extentReports = new ExtentReports();
+        //Creating HTML report in the path
+        extentHtmlReporter = new ExtentHtmlReporter(path);
 
         //***************RAPORU CUSTOMIZE EDEBILIRIZ************************************************
         extentReports.setSystemInfo("Test Environment", "Regression");

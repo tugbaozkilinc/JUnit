@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.Cookie;
 import utilities.TestBase;
-
 import java.util.Set;
 
 public class Homework01 extends TestBase {

@@ -1,6 +1,5 @@
 package practice.day03;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,15 +8,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class P02 {
 
     WebDriver driver;
     @Before
-    public void setUp() throws Exception {
-        WebDriverManager.chromedriver().setup();
+    public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -50,7 +47,7 @@ public class P02 {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         driver.close();
     }
 

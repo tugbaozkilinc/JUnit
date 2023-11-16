@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import practice.TestBasePractice;
-
 import java.time.Duration;
 
 public class P01_ExtentReport extends TestBasePractice {
@@ -22,7 +21,7 @@ public class P01_ExtentReport extends TestBasePractice {
 
         //Hello World! yazısının çıktığını doğrulayalım
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading... ']"))); //Start buttonuna bastıktan sonra Loading webelementi kaybolana kadar bekledik
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading... ']")));
         extentTest.info("Web element beklendi");
         assert driver.findElement(By.xpath("//*[text()='Hello World!']")).isDisplayed();
         extentTest.pass("Hello World yazısı doğrulandı");

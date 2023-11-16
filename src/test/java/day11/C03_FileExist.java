@@ -2,7 +2,6 @@ package day11;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
 

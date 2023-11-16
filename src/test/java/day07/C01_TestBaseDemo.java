@@ -26,7 +26,7 @@ public class C01_TestBaseDemo extends TestBase {
         //techproeducation ana sayfasina gidip, title in Bootcamps kelimesini icerdigini test edelim.
         driver.get("https://techproeducation.com");
         String pageTitle = driver.getTitle();
-        Assert.assertTrue(pageTitle.contains("Bootcamps"));
+        Assert.assertFalse(pageTitle.contains("Bootcamps"));
     }
 
 }

@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import utilities.TestBase;
-
 import java.time.Duration;
 
 public class C01_FluentWait extends TestBase {

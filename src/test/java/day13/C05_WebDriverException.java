@@ -1,8 +1,6 @@
 package day13;
 
-import utilities.TestBase;
-
-public class C05_WebDriverException extends TestBase {
+public class C05_WebDriverException {
 
     /*
     WebDriverException:

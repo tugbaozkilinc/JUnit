@@ -6,8 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WindowType;
 import utilities.TestBase;
 
-import java.util.Set;
-
 public class C01_WindowHandle extends TestBase {
 
     @Test

@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
-
 import java.util.Set;
 
 public class C01_WindowHandle1 extends TestBase {

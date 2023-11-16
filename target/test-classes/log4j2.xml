@@ -23,7 +23,7 @@
     This should be used with Logger-->
     <Loggers>
         <!-- SPECIAL SETTINGS : Istenilen klasordeki ayarlari degistirmek icin kullanilir.-->
-        <Logger name="day18" level="trace" additivity="false"> <!-- day18 dosyasindaki loglama islemini trace seviyesinde print yap. Birden fazla dosya olusturmak icin burdan -->
+        <Logger name="day15" level="trace" additivity="false"> <!-- day18 dosyasindaki loglama islemini trace seviyesinde print yap. Birden fazla dosya olusturmak icin burdan -->
             <AppenderRef ref="Console"/> <!-- Loglama mesajini konsolda goruruz-->
             <AppenderRef ref="file"/> <!-- Loglama mesajini file da goruruz-->
         </Logger> <!-- buraya kadar fazla fazla olusturabilirsin-->

@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +36,7 @@ public class P03 extends TestBase {
         // for (String w : driver.getWindowHandles()){
         //     if (!w.equals(firstWindowHandle)){
         //         driver.switchTo().window(w);
+        //         break;
         //     }
         // }
         String elementalTitle = driver.getTitle();

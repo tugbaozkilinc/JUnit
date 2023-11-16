@@ -8,7 +8,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.TestBase;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

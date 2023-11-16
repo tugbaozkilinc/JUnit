@@ -5,9 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
-
 import java.util.Set;
 
 public class Homework04 extends TestBase {

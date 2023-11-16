@@ -1,20 +1,17 @@
 package practice.day01;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class P05 {
 
     static WebDriver driver;
     @BeforeClass
-    public static void beforeClass() throws Exception {
-        WebDriverManager.chromedriver().setup();
+    public static void beforeClass() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -28,7 +25,7 @@ public class P05 {
     //AfterClass ile kapatın
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         driver.get("http://www.google.com ");
     }
 
@@ -48,13 +45,13 @@ public class P05 {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         String[] arr = driver.findElement(By.cssSelector("div[id='result-stats']")).getText().split(" ");
         System.out.println("The search result is: " + arr[1]);
     }
 
     @AfterClass
-    public static void afterClass() throws Exception {
+    public static void afterClass() {
         driver.quit();
     }
 

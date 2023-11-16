@@ -32,7 +32,7 @@ public class C01_NoSuchElementException extends TestBase {
     */
 
     @Test
-    public void noSuchElementTest() throws Exception {
+    public void noSuchElementTest() {
         driver.get("https://www.techproeducation.com");
         driver.findElement(By.xpath("wrong locator")).sendKeys("QA", Keys.ENTER);
         //Yanlış locator aldığımız için org.openqa.selenium.NoSuchElementException hatası ile karşılaştik.

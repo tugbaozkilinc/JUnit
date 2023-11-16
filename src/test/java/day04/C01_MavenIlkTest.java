@@ -1,11 +1,9 @@
 package day04;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -20,7 +18,6 @@ public class C01_MavenIlkTest {
         //Bu kod blogu bana uzaktaki github tan o kutuphaneyi otomatik olarak indirecek. Bu kodlari mvnrepository.com den alicaz.
         //Remote repository den istedigimiz kutuphaneyi local repository mize pom.xml sayesinde çok rahat alacagiz.
 
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

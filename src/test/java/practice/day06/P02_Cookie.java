@@ -3,7 +3,6 @@ package practice.day06;
 import org.junit.Test;
 import org.openqa.selenium.Cookie;
 import utilities.TestBase;
-
 import java.util.Set;
 
 public class P02_Cookie extends TestBase {

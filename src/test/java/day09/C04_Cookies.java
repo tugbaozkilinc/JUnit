@@ -3,7 +3,6 @@ package day09;
 import org.junit.Test;
 import org.openqa.selenium.Cookie;
 import utilities.TestBase;
-
 import java.util.Set;
 
 public class C04_Cookies extends TestBase {

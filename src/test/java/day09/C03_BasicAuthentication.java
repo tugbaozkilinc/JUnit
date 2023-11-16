@@ -15,16 +15,13 @@ public class C03_BasicAuthentication extends TestBase {
 
     @Test
     public void basicAuthenticationTest() {
-        //https://the-internet.herokuapp.com/basic_auth sayfasina gidin
-        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth"); //authentication url
-        //Note: Manuel olarak user name i password u girdik ve sayfaya giris sagladik fakat inspect yapamiyoruz Alert te oldugu gibi.(alert te tek box oldugu icin metin gonderebiliyorduk
-        //fakat burda iki tane box oldugu icin gonderemiyoruz, bu yuzden handle etmeliyiz.)
-
         //Asagidaki yontem ve test datalarini kullanarak authentication’i yapin
         //URL         : https://username:password@URL
         //Username    : admin
         //password    : admin
-        waitFor(3000);
+        //https://the-internet.herokuapp.com/basic_auth sayfasina gidin
+        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth"); //authentication url
+        waitFor(3);
 
         //Basarili sekilde sayfaya girin ve ‘Congratulations!’ yazisini doğrulayın.
         String actualText = driver.findElement(By.xpath("//p")).getText();

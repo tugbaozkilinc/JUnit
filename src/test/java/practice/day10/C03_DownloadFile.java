@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Set;

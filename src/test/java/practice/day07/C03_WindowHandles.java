@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import utilities.TestBase;
-
 import java.util.ArrayList;
 import java.util.List;
 
