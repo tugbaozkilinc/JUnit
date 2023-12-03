@@ -24,17 +24,17 @@ public class C04_BeforeClassAfterClass {
         System.out.println("Her testten sonra calisir");
     }
 
-    @Test
+    @Test @Ignore("tamamlanmadığı için çalıştırılmayacak")
     public void test01() {
         System.out.println("Ilk test");
     }
 
-    @Test
+    @Test @Ignore("uygulamadaki değişikliklerden dolayı geçici süreliğine çalıştırılmayacak")
     public void test02() {
         System.out.println("Ikinci test");
     }
 
-    @Test @Ignore
+    @Test
     public void test03() {
         System.out.println("Ucuncu test");
     }
